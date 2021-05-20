@@ -1,0 +1,76 @@
+@font-face {
+    font-family: 'Kalam';
+    src: url('Kalam-Bold.ttf');
+}
+
+header h1 {
+    font-family: 'Kalam';
+    font-size: 10vw;
+    text-align: center;
+    margin-bottom: 0%;
+}
+
+header h3 {
+    margin-top: 0%;
+    text-align: center;
+    font-size: 2vw;
+    font-family: 'Lucida Sans';
+}
+
+.loginInput {
+    text-align: center;
+    padding-top: 5vw;
+}
+
+label {
+    font-family: 'Lucida Sans';
+    font-weight: 1000;
+}
+
+.input {
+    height: 65px;
+    width: 444px;
+    border-radius: 110px;
+    text-align: center;
+    font-size: 200%;
+    border-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 10px 10px rgb(155, 155, 155);
+}
+
+.submit {
+    height: 65px;
+    width: 444px;
+    border-radius: 110px;
+    margin-top: 5%;
+    font-family: 'Kalam';
+    font-weight: 1000;
+    font-size: 200%;
+    background-color: blue;
+    color: white;
+}
+
+.round1 {
+    background-color: blue;
+    width: 50vw;
+    height: 50vw;
+    position: absolute;
+    top: -25vw;
+    left: -20vw;
+    border-radius: 500px;
+    z-index: -1;
+}
+
+.round2 {
+    background-color: #D22C07;
+    width: 50vw;
+    height: 50vw;
+    position: absolute;
+    border-radius: 50vw;
+    z-index: -1;
+    top: 25vw;
+    left: 50vw;
+}
+
+.possition {
+    position: absolute;
+}
