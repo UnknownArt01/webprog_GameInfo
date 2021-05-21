@@ -20,7 +20,7 @@
     <div class="possition">
         <div class="round2"></div>
     </div>
-    
+
     <div class="loginInput">
         <form action="" method="POST">
             <label for="username">Username / Email</label><br>
