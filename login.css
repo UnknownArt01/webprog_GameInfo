@@ -3,6 +3,11 @@
     src: url('Kalam-Bold.ttf');
 }
 
+@font-face {
+    font-family: 'Montserrat';
+    src: url('Montserrat-Medium.ttf');
+}
+
 header h1 {
     font-family: 'Kalam';
     font-size: 10vw;
@@ -14,7 +19,7 @@ header h3 {
     margin-top: 0%;
     text-align: center;
     font-size: 2vw;
-    font-family: 'Lucida Sans';
+    font-family: 'Montserrat';
 }
 
 .loginInput {
@@ -23,28 +28,30 @@ header h3 {
 }
 
 label {
-    font-family: 'Lucida Sans';
+    font-family: 'Montserrat';
     font-weight: 1000;
+    font-size: 3vw;
 }
 
 .input {
-    height: 65px;
-    width: 444px;
-    border-radius: 110px;
+    height: 6.5vw;
+    width: 44.4vw;
+    border-radius: 110vw;
     text-align: center;
-    font-size: 200%;
+    font-size: 5vw;
     border-color: rgba(0, 0, 0, 0.7);
     box-shadow: 10px 10px rgb(155, 155, 155);
+    margin-bottom: 5vw;
 }
 
 .submit {
-    height: 65px;
-    width: 444px;
+    height: 6.5vw;
+    width: 44.4vw;
     border-radius: 110px;
     margin-top: 5%;
     font-family: 'Kalam';
     font-weight: 1000;
-    font-size: 200%;
+    font-size: 4vw;
     background-color: blue;
     color: white;
 }
@@ -62,12 +69,11 @@ label {
 
 .round2 {
     background-color: #D22C07;
-    width: 50vw;
+    width: 25vw;
     height: 50vw;
     position: absolute;
     z-index: -1;
-    top: 225vw;
-    left: 50vw;
+    left: 74.6vw;
     border-top-left-radius: 50vw;
     border-bottom-left-radius: 50vw;
 }
