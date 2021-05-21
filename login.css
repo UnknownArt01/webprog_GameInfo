@@ -65,10 +65,11 @@ label {
     width: 50vw;
     height: 50vw;
     position: absolute;
-    border-radius: 50vw;
     z-index: -1;
     top: 25vw;
     left: 50vw;
+    border-top-left-radius: 50vw;
+    border-bottom-left-radius: 50vw;
 }
 
 .possition {
