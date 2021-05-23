@@ -8,14 +8,14 @@
     src: url('Montserrat-Medium.ttf');
 }
 
-header h1 {
+.header_h1_login {
     font-family: 'Kalam';
     font-size: 10vw;
     text-align: center;
     margin-bottom: 0%;
 }
 
-header h3 {
+.header_h3_login {
     margin-top: 0%;
     text-align: center;
     font-size: 2vw;

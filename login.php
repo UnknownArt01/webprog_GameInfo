@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="all.css">
     <title>Document</title>
 </head>
 
@@ -13,8 +13,8 @@
     <div class="round1"></div>
     <div>
         <header>
-            <h1>GameInfo</h1>
-            <h3>INFO MENARIK SEPUTAR GAME & TEKNOLOGI</h3>
+            <h1 class="header_h1_login">GameInfo</h1>
+            <h3 class="header_h1_login">INFO MENARIK SEPUTAR GAME & TEKNOLOGI</h3>
         </header>
     </div>
     <div class="round2"></div>
