@@ -1,3 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
 @font-face {
     font-family: 'Kalam';
     src: url('Kalam-Bold.ttf');
@@ -7,18 +14,24 @@
     font-family: 'Montserrat';
     src: url('Montserrat-Medium.ttf');
 }
+/* Login.php */
+.container {
+    position: relative;
+    max-width: 100%;
+}
 
 .header_h1_login {
     font-family: 'Kalam';
-    font-size: 10vw;
+    font-size: 70px;
     text-align: center;
     margin-bottom: 0%;
+    padding-top: 130px;
 }
 
 .header_h3_login {
     margin-top: 0%;
     text-align: center;
-    font-size: 2vw;
+    font-size: 30px;
     font-family: 'Montserrat';
 }
 
@@ -30,54 +43,55 @@
 label {
     font-family: 'Montserrat';
     font-weight: 1000;
-    font-size: 3vw;
+    font-size: 20px;
 }
 
 .input {
-    height: 6.5vw;
-    width: 44.4vw;
+    height: 50px;
+    width: 300px;
     border-radius: 110vw;
     text-align: center;
-    font-size: 5vw;
+    font-size: 20px;
     border-color: rgba(0, 0, 0, 0.7);
     box-shadow: 10px 10px rgb(155, 155, 155);
-    margin-bottom: 5vw;
+    margin-bottom: 20px;
+    outline: none;
 }
 
 .submit {
-    height: 6.5vw;
-    width: 44.4vw;
+    height: 50px;
+    width: 600px;
     border-radius: 110px;
-    margin-top: 5%;
+    margin-top: 40px;
     font-family: 'Kalam';
     font-weight: 1000;
-    font-size: 4vw;
+    font-size: 30px;
     background-color: blue;
     color: white;
 }
 
 .round1 {
     background-color: blue;
-    width: 50vw;
-    height: 50vw;
+    width: 400px;
+    height: 400px;
     position: absolute;
-    top: -25vw;
-    left: -20vw;
+    top: -150px;
+    left: -150px;
     border-radius: 50vw;
     z-index: -1;
 }
 
 .round2 {
     background-color: #D22C07;
-    width: 25vw;
-    height: 50vw;
-    position: absolute;
+    width: 400px;
+    height: 400px;
+    position:fixed;
     z-index: -1;
-    left: 74.6vw;
-    border-top-left-radius: 50vw;
-    border-bottom-left-radius: 50vw;
+    /* left: 74.5vw; */
+    bottom: -100px;
+    right: -100px;
+    border-radius: 50vw;
+    /* border-top-left-radius: 50vw;
+    border-bottom-left-radius: 50vw; */
 }
-
-.possition {
-    position: absolute;
-}
+/* index.php */
