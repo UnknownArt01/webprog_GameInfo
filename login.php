@@ -14,7 +14,7 @@
     <div>
         <header>
             <h1 class="header_h1_login">GameInfo</h1>
-            <h3 class="header_h1_login">INFO MENARIK SEPUTAR GAME & TEKNOLOGI</h3>
+            <h3 class="header_h3_login">INFO MENARIK SEPUTAR GAME & TEKNOLOGI</h3>
         </header>
     </div>
     <div class="round2"></div>
