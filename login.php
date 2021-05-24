@@ -5,13 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
-    <link rel="stylesheet" href="login.css">
-    <title>GameInfo - Info seputar game & teknologi</title>
-=======
     <link rel="stylesheet" href="all.css">
-    <title>Document</title>
->>>>>>> 18190759bb47aab8fe154e9092b7e95982b1fa95
+    <title>GameInfo - Info seputar game & teknologi</title>
 </head>
 
 <body>
