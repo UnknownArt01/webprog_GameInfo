@@ -9,25 +9,28 @@
     <title>admin</title>
 </head>
 
-<body>//kategori id sama sama nama
-    <div>
+<body>
+    <div class="bodydiv">
         <header class="adminHeader">
-            <div>
+            <div class="header">
                 <h1 class="adminHeaderLogo">GameInfo</h1>
-                <div></div>
+                <div class="clear"></div>
                 <h4 class="adminHeaderLogo2">INFO MENARIK SEPUTAR GAME & TEKNOLOGI</h4>
             </div>
-            <div>
-                <a href="">Home</a>
-                <a href="">Category</a>
-                <a href="">News</a>
-                <a href="">HOT NEWS!</a>
-                <a href="">Admin</a>
+            <div class="a_header">
+                <div class="adminHeaderA">
+                    <a class="a_header" href="">Home</a>
+                    <a class="a_header" href="">Category</a>
+                    <a class="a_header" href="">News</a>
+                    <a class="a_header" href="">HOT NEWS!</a>
+                    <a class="a_header" href="">Admin</a>
+                </div>
             </div>
-            <div>
-               <form action="">
-                   <input class="inputSearch" type="text" name="search" value="Search">
-               </form> 
+
+            <div class="header">
+                <form action="">
+                    <input class="inputSearch" type="text" name="search" value="Search">
+                </form>
             </div>
         </header>
     </div>

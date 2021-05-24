@@ -13,9 +13,6 @@
     function close_connection($x){
         mysqli_close($x);
     }
-<<<<<<< HEAD
-   
-=======
 
     function login(){
         $adminuser = "admin";
@@ -40,5 +37,4 @@
             // header("Location: login.php");
         }
     }
->>>>>>> e341b9b26aa08b10bca5df117624fad528f3bbff
 ?>
