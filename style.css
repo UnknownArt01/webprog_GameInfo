@@ -56,12 +56,12 @@ nav ul li a:hover {
 }
 
 .latest-post {
-    width: 62%;
+    width: 59%;
     margin: 20px;
-    height: 600px;
+    height: 700px;
     background-color: rgb(190, 190, 190);
     float: left;
-    border-radius: 30px;
+    border-radius: 20px;
 }
 
 .latest-post h1{
@@ -118,7 +118,6 @@ div.socmed-instagram {
     width: 50px;
     height: 50px;
     
-
 }
 
 .img-fb {
@@ -136,6 +135,34 @@ div.socmed-instagram {
     height: 45px;
 
 }
+
+div.latest-post1 {
+    background-color: white;
+    height: 125px;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+.latest-post1
+
+div.latest-post2 {
+    background-color: white;
+    height: 125px;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+div.latest-post3 {
+    background-color: white;
+    height: 125px;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+
 
 
 

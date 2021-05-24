@@ -53,6 +53,20 @@
         <div class="latest-post">
             <h1>LATEST POST</h1>
             <br>
+            <div class="latest-post1">
+                <h2>Selyandaru Akhirnya Tidak Jomblo</h2>
+                <p>lorem</p>
+            </div>
+
+            <div class="latest-post2">
+                <h2>Rafi Masuk Nominal Tertampan IMT?</h2>
+                <p>lorem</p>
+            </div>
+                 
+            <div class="latest-post3">
+                <h2>Seorang Programmer Terkena Tipes</h2>
+                <p>lorem</p>
+            </div>
 
         </div>
 
