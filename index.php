@@ -60,14 +60,17 @@
             <h1>OUR SOCIAL MEDIA!</h1>
 
             <div class="socmed-facebook">
+                <img src="img/facebook.png" class="img-fb">
                 <h1>Facebook</h1>
             </div>
 
             <div class="socmed-youtube">
+                <img src="img/youtube.png" class="img-yt">
                 <h1>Youtube</h1>
             </div>
 
             <div class="socmed-instagram">
+                <img src="img/instagram.png" class="img-ig">
                 <h1>Instagram</h1>
             </div>
 
