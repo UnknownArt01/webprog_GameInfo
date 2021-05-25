@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -14,7 +14,10 @@
     font-family: 'Montserrat';
     src: url('Montserrat-Medium.ttf');
 }
+
+
 /* Login.php */
+
 .container {
     position: relative;
     max-width: 100%;
@@ -85,7 +88,7 @@ label {
     background-color: #D22C07;
     width: 400px;
     height: 400px;
-    position:fixed;
+    position: fixed;
     z-index: -1;
     /* left: 74.5vw; */
     bottom: -100px;
@@ -94,4 +97,29 @@ label {
     /* border-top-left-radius: 50vw;
     border-bottom-left-radius: 50vw; */
 }
-/* index.php */
+
+
+/* admin.php */
+
+.adminHeader {
+    display: flex;
+}
+
+.adminHeaderLogo {
+    font-family: 'Kalam';
+    float: left;
+    margin-bottom: 0%;
+}
+
+.adminHeaderLogo2 {
+    font-family: 'Montserrat';
+    float: left;
+    font-size: 50%;
+    margin-top: 0%;
+}
+
+.inputSearch {
+    height: 2vw;
+    width: 300px;
+    border-radius: 110px;
+}
