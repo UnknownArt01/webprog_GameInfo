@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
@@ -52,22 +51,51 @@
         </section>
 
         <section class="container2">
+            <div class="HotNews">
+                <div class="BiggestHot"><img src="img/facebook.png"></div>
+                <div class="biggesthot2">
+                    <div class="SmallHot">
+                        <img src="img/facebook.png">
+                    </div>
+                    <div class="clear"></div>
+                    <div class="SmallHot">
+                        <img src="img/facebook.png">
+                    </div>
+                    <div class="clear"></div>
+                    <div class="SmallHot">
+                        <img src="img/facebook.png">
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
             <div class="latest-post">
                 <h1>LATEST POST</h1>
                 <br>
                 <div class="latest-post1">
-                    <h2>Selyandaru Akhirnya Tidak Jomblo</h2>
-                    <p>lorem</p>
+                    <div class="postImage"></div>
+                    <div class="ArticleHome">
+                        <h2>Selyandaru Akhirnya Tidak Jomblo</h2>
+                        <p>lorem</p>
+                    </div>
+
                 </div>
 
                 <div class="latest-post2">
-                    <h2>Rafi Masuk Nominal Tertampan IMT?</h2>
-                    <p>lorem</p>
+                    <div class="postImage"></div>
+                    <div class="ArticleHome">
+                        <h2>Rafi Masuk Nominal Tertampan IMT?</h2>
+                        <p>lorem</p>
+                    </div>
+
                 </div>
 
                 <div class="latest-post3">
-                    <h2>Seorang Programmer Terkena Tipes</h2>
-                    <p>lorem</p>
+                    <div class="postImage"></div>
+                    <div class="ArticleHome">
+                        <h2>Seorang Programmer Terkena Tipes</h2>
+                        <p>lorem</p>
+                    </div>
+
                 </div>
 
             </div>
@@ -76,18 +104,18 @@
                 <h1>OUR SOCIAL MEDIA!</h1>
 
                 <div class="socmed-facebook">
-                    <img src="img/facebook.png" class="img-fb">
-                    <h1>Facebook</h1>
+                    <div class="img-fb"><img src="img/facebook.png"></div>
+                    <h2 class="socmed">GameInfo</h2>
                 </div>
 
                 <div class="socmed-youtube">
-                    <img src="img/youtube.png" class="img-yt">
-                    <h1>Youtube</h1>
+                    <div class="img-yt"><img src="img/youtube.png"></div>
+                    <h2 class="socmed">GameInfo Official</h2>
                 </div>
 
                 <div class="socmed-instagram">
-                    <img src="img/instagram.png" class="img-ig">
-                    <h1>Instagram</h1>
+                    <div class="img-ig"><img src="img/instagram.png"></div>
+                    <h2 class="socmed">officialgameinfo</h2>
                 </div>
 
 

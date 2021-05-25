@@ -103,6 +103,8 @@ label {
 
 body {
     justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 }
 
 .bodydiv {
@@ -206,4 +208,162 @@ footer h4 {
     text-align: center;
     padding-top: 0.5%;
     padding-bottom: 0.5%;
+}
+
+
+/* latest post index.php and social media */
+
+.latest-post {
+    width: 59%;
+    margin: 20px;
+    height: max-content;
+    float: left;
+    border-radius: 20px;
+}
+
+.latest-post h1 {
+    padding: 30px;
+    margin-left: 15px;
+    font-family: 'Montserrat';
+    font-size: 2vw;
+}
+
+.our-social-media {
+    padding-top: 60px;
+    margin: 20px;
+    width: 30%;
+    height: 400px;
+    padding: 15px;
+    float: right;
+    border-radius: 30px;
+    font-size: 1vw;
+    text-align: center;
+}
+
+.our-social-media h2 {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 1.5vw;
+}
+
+div.socmed-facebook {
+    background-color: blue;
+    margin: 2%;
+    padding: 2%;
+    height: 70px;
+    border-radius: 15px;
+    color: white;
+    box-shadow: 5px 5px 5px 5px grey;
+}
+
+div.socmed-youtube {
+    background-color: white;
+    margin: 2%;
+    padding: 2%;
+    height: 70px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px 5px grey;
+}
+
+div.socmed-instagram {
+    background-color: white;
+    margin: 2%;
+    padding: 2%;
+    height: 70px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px 5px grey;
+}
+
+.img-ig {
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin-right: 10%;
+}
+
+.img-fb {
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin-right: 10%;
+}
+
+.img-yt {
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin-right: 10%;
+}
+
+.socmed {
+    float: left;
+    font-family: 'Poppins';
+    font-size: 200%;
+}
+
+div.latest-post1 {
+    background-color: white;
+    height: 225px;
+    padding: 20px;
+    margin: 40px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px 10px grey;
+}
+
+
+/* .latest-post1 */
+
+.latest-post2 {
+    background-color: white;
+    height: 225px;
+    padding: 20px;
+    margin: 40px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px 10px grey;
+}
+
+div.latest-post3 {
+    background-color: white;
+    height: 225px;
+    padding: 20px;
+    margin: 40px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px 10px grey;
+}
+
+.postImage {
+    height: 80%;
+    width: 20%;
+    float: left;
+    background-color: grey;
+    margin: 20px;
+}
+
+.ArticleHome {
+    margin: 20px;
+}
+
+
+/* Hot News Home */
+
+.HotNews {
+    width: 97.5%;
+    height: 700px;
+}
+
+.BiggestHot {
+    width: 60%;
+    background-color: grey;
+    float: left;
+    height: max-content;
+}
+
+.biggesthot2 {
+    float: left;
+}
+
+.SmallHot {
+    float: left;
+    width: 20%;
+    background-color: grey;
 }
