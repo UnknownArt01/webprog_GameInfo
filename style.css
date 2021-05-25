@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+/*Navbar */
+
+nav {
+    display: flex;
+    background-color: navy;
+    justify-content: space-around;
+    padding: 20px;
+    color: white;
+    align-items: center;
+}
+
+nav .logo {
+    font-family: 'Kalam', cursive;
+    font-size: 25px;
+    color: white;
+    align-items: center;
+    text-decoration: none;
+    
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    width: 23%;
+    justify-content: space-between;
+
+}
+
+nav ul li a {
+    display: flex;
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+}
+
+a.hotnews {
+    color: red;
+}
+
+nav ul li a:hover {
+    color: aqua;
+}
+
+.search-box {
+    padding: 5px;
+}
+
+.latest-post {
+    width: 59%;
+    margin: 20px;
+    height: 700px;
+    background-color: rgb(190, 190, 190);
+    float: left;
+    border-radius: 20px;
+}
+
+.latest-post h1{
+    padding: 30px;
+    margin-left: 15px;
+}
+
+.our-social-media {
+    background-color: aqua;
+    padding-top: 60px;
+    margin : 20px;
+    width: 30%;
+    height: 400px;
+    
+    padding: 15px;
+    float: right;
+    border-radius: 30px;
+}
+.our-social-media h1 {
+    text-align: center;
+    font-weight: bolder;
+    
+    
+}
+
+div.socmed-facebook {
+    
+    background-color: brown;
+    margin: 10px;
+    height: 70px;
+    border-radius: 15px;
+}
+
+div.socmed-youtube {
+    background-color: white;
+    margin: 10px;
+    height: 70px;
+    border-radius: 15px;
+    
+}
+
+div.socmed-instagram {  
+    background-color: white;
+    margin: 10px;
+    height: 70px;
+    border-radius: 15px;
+
+}
+
+
+.img-ig {
+    padding-left: 37px;
+    padding-top: 10px;
+    width: 50px;
+    height: 50px;
+    
+}
+
+.img-fb {
+    padding-left: 37px;
+    padding-top: 10px;
+    width: 50px;
+    height: 50px;
+
+}
+
+.img-yt {
+    padding-left: 30px;
+    padding-top: 12px;
+    width: 63px;
+    height: 45px;
+
+}
+
+div.latest-post1 {
+    background-color: white;
+    height: 125px;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+/* .latest-post1 */
+
+.latest-post2 {
+    background-color: white;
+    height: 125px;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+div.latest-post3 {
+    background-color: white;
+    height: 125px;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+
+
+
+
