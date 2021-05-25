@@ -15,7 +15,8 @@
     <title>admin</title>
 </head>
 
-<body>//kategori id sama sama nama
+<body>
+    <!-- kategory id sama nama -->
     <div>
         <header class="adminHeader">
             <div>
