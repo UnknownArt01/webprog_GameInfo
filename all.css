@@ -63,7 +63,7 @@ label {
 
 .submit {
     height: 50px;
-    width: 600px;
+    width: 500px;
     border-radius: 110px;
     margin-top: 40px;
     font-family: 'Kalam';
@@ -71,6 +71,17 @@ label {
     font-size: 30px;
     background-color: blue;
     color: white;
+}
+
+.buttonSubmit {
+    color: white;
+    background-color: #170059;
+    width: fit-content;
+    height: fit-content;
+    font-size: 30px;
+    border: 2px solid #170059;
+    border-radius: 300px;
+    padding: 5px;
 }
 
 .round1 {
@@ -139,7 +150,7 @@ body {
 }
 
 .a_header {
-    flex: 2;
+    flex: 1.5;
     text-align: center;
 }
 
@@ -153,7 +164,6 @@ body {
 
 header div form {
     float: right;
-    margin-right: 5%;
 }
 
 header a {
@@ -163,12 +173,12 @@ header a {
     font-family: 'Montserrat';
     font-weight: bold;
     text-decoration: none;
-    font-size: 150%;
+    font-size: 130%;
 }
 
 .adminHeaderA {
     display: flex;
-    padding: 5%;
+    padding-top: 7%;
 }
 
 
@@ -348,22 +358,44 @@ div.latest-post3 {
 
 .HotNews {
     width: 97.5%;
-    height: 700px;
+    height: 600px;
 }
 
 .BiggestHot {
     width: 60%;
     background-color: grey;
     float: left;
-    height: max-content;
+    height: 600px;
+    margin-top: 4%;
+    margin-left: 5%;
+    margin-right: 1%;
 }
 
 .biggesthot2 {
     float: left;
+    width: 30%;
+    margin-top: 4%;
+    height: 600px;
 }
 
-.SmallHot {
-    float: left;
-    width: 20%;
+.SmallHot1 {
+    width: 90%;
     background-color: grey;
+    height: 190px;
+    margin-bottom: 10px;
+}
+
+.SmallHot2 {
+    width: 90%;
+    background-color: grey;
+    height: 190px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.SmallHot3 {
+    width: 90%;
+    background-color: grey;
+    height: 190px;
+    margin-top: 10px;
 }

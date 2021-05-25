@@ -39,6 +39,7 @@
             <div class="header">
                 <form action="">
                     <input class="inputSearch" type="text" name="search" value="Search">
+                    <input class="buttonSubmit" type="submit" name="search" value="search">
                 </form>
             </div>
         </header>
@@ -52,18 +53,18 @@
 
         <section class="container2">
             <div class="HotNews">
-                <div class="BiggestHot"><img src="img/facebook.png"></div>
+                <div class="BiggestHot"></div>
                 <div class="biggesthot2">
-                    <div class="SmallHot">
-                        <img src="img/facebook.png">
+                    <div class="SmallHot1">
+                        
                     </div>
                     <div class="clear"></div>
-                    <div class="SmallHot">
-                        <img src="img/facebook.png">
+                    <div class="SmallHot2">
+                        
                     </div>
                     <div class="clear"></div>
-                    <div class="SmallHot">
-                        <img src="img/facebook.png">
+                    <div class="SmallHot3">
+                        
                     </div>
                 </div>
             </div>
