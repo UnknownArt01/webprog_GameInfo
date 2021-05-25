@@ -99,7 +99,7 @@ label {
 }
 
 
-/* admin.php */
+/* index.php */
 
 body {
     justify-content: center;
@@ -111,7 +111,6 @@ body {
 
 .adminHeader {
     display: flex;
-    border: 5px solid black;
 }
 
 .adminHeaderLogo {
@@ -168,4 +167,43 @@ header a {
 .adminHeaderA {
     display: flex;
     padding: 5%;
+}
+
+
+/* footer */
+
+footer {
+    background-color: #170059;
+    color: white;
+}
+
+.Footer {
+    float: left;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 2%;
+}
+
+.adminFooterLogo {
+    font-family: 'Kalam';
+    margin-bottom: 0%;
+    font-size: 300%;
+    text-align: center;
+}
+
+.adminFooterLogo2 {
+    font-family: 'Montserrat';
+    font-size: 100%;
+    text-align: center;
+}
+
+hr {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+footer h4 {
+    text-align: center;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
 }
