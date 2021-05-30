@@ -10,42 +10,47 @@
 </head>
 
 <body>
-    <div>
+    <div class="latest-post1">
         <form method="POST" action="addcomment.php">
             <label for="name">Name : </label>
             <input type="text" name="name"><br><br>
-            <label for="comment">Message :</label>
-            <input class="comment-text" type="text" name="comment"><br><br>
+            <label for="comment">Comment :</label><br>
+            <textarea name="comment" class="comment-text" cols="30" rows="10"></textarea><br><br>
             <input type="submit" name="submit">
         </form>
     </div>
 
     <br>
     <br>
-    <?php
+    
+        <?php
 
-include_once 'controller.php';
+            include_once 'controller.php';
 
-$conn = connect_database();
+            $conn = connect_database();
 
-$sql = "SELECT id, name, comment FROM comment_section";
-$result = $conn->query($sql);
+            $sql = "SELECT id, name, comment FROM comment_section";
+            $result = $conn->query($sql);
 
 // m=ngecek kalau datanya itu lebih banyak dari 0
-if ($result->num_rows > 0){
-    while ($row = $result->fetch_assoc()){
-        echo 'id : ' . $row["id"] . '<br>';
-        echo 'name : ' . $row["name"] . '<br>';
-        echo 'comment : ' . $row["comment"] . '<br>';
+            if ($result->num_rows > 0){
+                while ($row = $result->fetch_assoc()){
+                    echo '<div class="latest-post1">';
+                    echo 'id : ' . $row["id"] . '<br>';
+                    echo 'name : ' . $row["name"] . '<br>';
+                    echo 'comment : ' . $row["comment"] . '<br>';
+                    echo '</div>';
         
-    }
-}else{
-    echo "0 results";
-}
+                }
+            }else{
+                echo "0 results";
+            }
 
-$conn->close();
+            $conn->close();
 
-?>
+        ?>
+    
+
 </body>
 
 </html>

@@ -37,7 +37,7 @@
 
             <div class="header">
                 <form action="">
-                    <input class="inputSearch" type="text" name="search" value="Search">
+                    <input class="inputSearch" type="search" name="search" value="Search">
                     <input class="buttonSubmit" type="submit" name="search" value="search">
                 </form>
             </div>
