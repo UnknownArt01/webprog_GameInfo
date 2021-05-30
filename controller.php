@@ -13,4 +13,7 @@
     function close_connection($x){
         mysqli_close($x);
     }
+
+
+    
 ?>
