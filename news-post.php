@@ -11,18 +11,18 @@
 <?php
     include_once 'controller.php';
     $conn = connect_database();
-    $sql = "SELECT post_id, news_post, news_date, news_admin, news_title FROM news";
+    $sql = "SELECT article_id, news_post, article_date, news_admin, article_title FROM news";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
         while ($row = $result ->fetch_assoc()){
             
             echo '<div class="isi-post">';
-               echo '<h1>'.$row["news_title"].'</h1>'; 
+               echo '<h1>'.$row["article_title"].'</h1>'; 
                 echo '<br>';
                 echo '<hr class="solid">';
                 echo '<br>';
-            echo '<p class="news-date">'.$row["news_date"].'   |   '.$row["news_admin"].'</p> ';
+            echo '<p class="news-date">'.$row["article_date"].'   |   '.$row["news_admin"].'</p> ';
             echo '<p class="news_post">'.$row["news_post"].'</p>';
             echo '</div>';
             

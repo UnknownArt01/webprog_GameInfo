@@ -3,7 +3,7 @@
         $dbhost = "localhost";
         $dbuser = "root";
         $dbpass = "";
-        $db = "project";
+        $db = "gait1542_gameinfo";
 
         $connect = mysqli_connect($dbhost, $dbuser, $dbpass, $db) or die ("Error  Connecting to Database");
 
