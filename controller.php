@@ -1,9 +1,9 @@
 <?php
-    function connect_database($connect){
+    function connect_database(){
         $dbhost = "localhost";
         $dbuser = "root";
         $dbpass = "";
-        $db = "project";
+        $db = "gameinfo";
 
         $connect = mysqli_connect($dbhost, $dbuser, $dbpass, $db) or die ("Error  Connecting to Database");
 

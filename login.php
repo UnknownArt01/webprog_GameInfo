@@ -1,3 +1,10 @@
+<?php
+    include_once 'controller.php';
+
+    if(isset($_POST['login'])){
+        login();
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,13 +36,6 @@
                 <input class="input" type="password" name="password"><br><br>
                 <input class="submit" type="submit" name="login" value="Login">
             </form>
-            <?php
-            include_once 'controller.php';
-
-            if(isset($_POST['login'])){
-                login();
-            }
-        ?>
         </div>
     </div>
 
