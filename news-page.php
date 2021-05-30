@@ -1,5 +1,7 @@
 <?php
-    include_once 'controller.php';
+
+include_once ("controller.php");
+
 
 ?>
 
@@ -50,34 +52,39 @@
             <div class="div1-left">
             </div>
         </section>
-        <!-- <section class="container2">
-            <div class="HotNews">
-                <div class="BiggestHot"></div>
-                <div class="biggesthot2">
-                    <div class="SmallHot1">
+       
+
+            <?php
+                include_once 'controller.php';
+                $conn = connect_database();
+                $sql = "SELECT post_id, news_post, news_date, news_admin, news_title FROM news";
+                $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+                    while ($row = $result ->fetch_assoc()){
                         
-                    </div>
-                    <div class="clear"></div>
-                    <div class="SmallHot2">
-                        
-                    </div>
-                    <div class="clear"></div>
-                    <div class="SmallHot3">
-                        
-                    </div>
-                </div>
-            </div> -->
-            <div class="isi-post">
-                <h1>Selyandaru Akhirnya Tidak Jomblo</h1>
-                <br>
-                <hr class="solid">
-                <br>
-                <p class="news-date"><?php echo "08 Mei 2021" ?>   |   <?php echo "Admin"?></p> 
-                <p class="article"> </p>
-            </div>
+                        echo '<div class="isi-post">';
+                        echo '<h1>'.$row["news_title"].'</h1>'; 
+                        echo '<br>';
+                        echo '<hr class="solid">';
+                        echo '<br>';
+                        echo '<p class="news-date">'.$row["news_date"].'   |   '.$row["news_admin"].'</p> ';
+                        echo '<p class="news_post">'.$row["news_post"].'</p>';
+                        echo '</div>';
+                    }
+                }
+
+            ?>
+            
+
+
+            <a href="edit.php">Edit</a>
+            
+            <input type="submit" value="Edit">
 
 
             <div class="clear"></div>
+
             <div class="latest-post">
                 <h1>LATEST POST</h1>
                 <br>
@@ -137,3 +144,23 @@
     </section>
 </body>
 </html>
+
+<?php 
+
+    if(isset($_POST['update'])) {
+        	
+	$id = $_POST['post_id'];
+	
+	$newspost=$_POST['news_post'];
+	$date=$_POST['news_date'];
+	$title=$_POST['news_title'];
+
+	
+	$result = mysqli_query($mysqli, "UPDATE users SET name='$newspost',date='$date',title='$title' WHERE id=$id");
+	
+	
+	// header("Location: index.php");
+}
+
+
+?>

@@ -1,5 +1,5 @@
 <?php
-    function connect_database($connect){
+    function connect_database(){
         $dbhost = "localhost";
         $dbuser = "root";
         $dbpass = "";
