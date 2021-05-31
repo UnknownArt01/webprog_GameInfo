@@ -151,6 +151,7 @@ body {
 
 .a_header {
     flex: 1.5;
+    text-decoration: none;
     text-align: center;
 }
 
@@ -176,8 +177,13 @@ header a {
     font-size: 130%;
 }
 
+.a_header-hot {
+    color:#D22C07;
+}
+
 .adminHeaderA {
     display: flex;
+    text-decoration: none;
     padding-top: 7%;
 }
 
@@ -257,9 +263,10 @@ footer h4 {
 }
 
 div.socmed-facebook {
-    background-color: blue;
+    background-color: #3C589E;
     margin: 2%;
     padding: 2%;
+    
     height: 70px;
     border-radius: 15px;
     color: white;
@@ -270,6 +277,7 @@ div.socmed-youtube {
     background-color: white;
     margin: 2%;
     padding: 2%;
+    
     height: 70px;
     border-radius: 15px;
     box-shadow: 5px 5px 5px 5px grey;
@@ -311,13 +319,25 @@ div.socmed-instagram {
     font-size: 200%;
 }
 
+
+
 div.latest-post1 {
     background-color: white;
     height: 225px;
     padding: 20px;
     margin: 40px;
     border-radius: 20px;
-    box-shadow: 10px 10px 10px 10px grey;
+    box-shadow: 3px 3px 3px 3px grey;
+}
+
+div.comment-section {
+    background-color: white;
+    height: 225px;
+    padding: 20px;
+    margin: 40px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px 3px grey;
+
 }
 
 
@@ -329,7 +349,7 @@ div.latest-post1 {
     padding: 20px;
     margin: 40px;
     border-radius: 20px;
-    box-shadow: 10px 10px 10px 10px grey;
+    box-shadow: 3px 3px 3px 3px grey;
 }
 
 div.latest-post3 {
@@ -338,8 +358,33 @@ div.latest-post3 {
     padding: 20px;
     margin: 40px;
     border-radius: 20px;
-    box-shadow: 10px 10px 10px 10px grey;
+    box-shadow: 3px 3px 3px 3px grey;
 }
+
+/* Share Button */
+
+.share-fb {
+    background-color: #3C589E;
+    width: 150px;
+    color: white;
+    height: 30px;
+    margin-left: 50px;
+}
+
+.share-wa {
+    background-color: green;
+    width: 150px;
+    color: white;
+    height: 30px;
+    margin-left: 10px;
+}
+
+.share-twitter {
+    width: 150px;
+    height: 30px;
+}
+
+
 
 .postImage {
     height: 80%;
@@ -405,10 +450,46 @@ div.latest-post3 {
 
 .comment-text {
     height: 200px;
-    width: 400px;
+    width: 100%;
     font-size: 20px;
     border-color: rgba(0, 0, 0, 0.7);
     box-shadow: 10px 10px rgb(155, 155, 155);
     margin-bottom: 20px;
     outline: none;
+    resize: none;
+
 }
+
+
+.comment-areapanel {
+    background-color: white;
+    height: 450px;
+    padding: 20px;
+   
+    margin: 40px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px 10px grey;
+}
+
+.submit-comment {
+    
+    width: 150px;
+    height: 35px;
+    background-color: white;
+    font-size: 16px;
+    border-radius: 10px;
+    background-color: #170059;
+    color: white;
+}
+
+.submit-comment:hover {
+    background-color: white;
+    font-weight: bold;
+    color: #170059;
+}
+
+.comment-name {
+    width: 300px;
+    height: 25px;
+}
+

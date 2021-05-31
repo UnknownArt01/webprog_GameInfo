@@ -26,11 +26,12 @@
                 <h4 class="adminHeaderLogo2">INFO MENARIK SEPUTAR GAME & TEKNOLOGI</h4>
             </div>
             <div class="a_header">
-                <div class="adminHeaderA">
-                    <a class="a_header" href="">Home</a>
-                    <a class="a_header" href="">Category</a>
-                    <a class="a_header" href="">News</a>
-                    <a class="a_header" href="">HOT NEWS!</a>
+            <div class="adminHeaderA">
+                    <a class="a_header" href="index.php">Home</a>
+                    <a class="a_header" href="category.php">Category</a>
+                    <a class="a_header" href="news-page.php">News</a>
+                    <a class="a_header-hot" href="">HOT NEWS!</a>
+                    <a class="a_header" href="admin.php">Admin</a>
                 </div>
             </div>
 
