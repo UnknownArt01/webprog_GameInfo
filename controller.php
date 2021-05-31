@@ -3,7 +3,7 @@
         $dbhost = "localhost";
         $dbuser = "root";
         $dbpass = "";
-        $db = "gait1542_gameinfo";
+        $db = "gameinfo";
 
         $connect = mysqli_connect($dbhost, $dbuser, $dbpass, $db) or die ("Error  Connecting to Database");
 
@@ -26,7 +26,7 @@
         if($user == $adminuser && $pass == $adminpass){
             session_start();
             $_SESSION['username'] = $user;
-            header("Location: admin.php");
+            header("Location: panel.php");
         } else {
             $message = "Invalid Login Credentials!";
             echo "<script>

@@ -31,7 +31,6 @@
                     <a class="a_header" href="">Category</a>
                     <a class="a_header" href="">News</a>
                     <a class="a_header" href="">HOT NEWS!</a>
-                    <a class="a_header" href="">Admin</a>
                 </div>
             </div>
 
@@ -127,8 +126,8 @@
         <footer>
             <h4>Copyright 2021 | GameInfo</h4>
         </footer>
-
     </section> -->
+    </div>
     <div class="clear"></div>
     <section>
         <footer>
