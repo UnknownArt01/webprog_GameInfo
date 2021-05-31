@@ -129,40 +129,6 @@
         </footer>
 
     </section> -->
-<<<<<<< HEAD
-
-           
-
-</body>
-</html>
-||||||| merged common ancestors
-
-           
-
-</body>
-</html>
-||||||||| f24eed7
-=========
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <header>
-        <div>
-            <h1> TESSS </h1>
-            <a href="login.php">tes admin login</a>
-        </div>
-    </header>
-</body>
-</html>
->>>>>>>>> Temporary merge branch 2
-=======
-    </div>
     <div class="clear"></div>
     <section>
         <footer>
@@ -178,6 +144,5 @@
         </footer>
     </section>
 </body>
-
 </html>
->>>>>>> 2b1ee21c8572af88fb7989c1e105f47af3908edc
+
