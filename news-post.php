@@ -11,7 +11,7 @@
 <?php
     include_once 'controller.php';
     $conn = connect_database();
-    $sql = "SELECT article_id, news_post, article_date, news_admin, article_title FROM news";
+    $sql = "SELECT article_id, article_post, article_date, article_admin, article_title FROM news";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
@@ -22,8 +22,8 @@
                 echo '<br>';
                 echo '<hr class="solid">';
                 echo '<br>';
-            echo '<p class="news-date">'.$row["article_date"].'   |   '.$row["news_admin"].'</p> ';
-            echo '<p class="news_post">'.$row["news_post"].'</p>';
+            echo '<p class="news-date">'.$row["article_date"].'   |   '.$row["article_admin"].'</p> ';
+            echo '<p class="news_post">'.$row["article_post"].'</p>';
             echo '</div>';
             
         }
