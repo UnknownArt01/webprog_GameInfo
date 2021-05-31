@@ -29,7 +29,6 @@
             $sql = "SELECT id, name, comment FROM comment_section";
             $result = $conn->query($sql);
 
-// mengecek kalau datanya itu lebih banyak dari 0
             if ($result->num_rows > 0){
                 while ($row = $result->fetch_assoc()){
                     echo '<div class="latest-post1">';

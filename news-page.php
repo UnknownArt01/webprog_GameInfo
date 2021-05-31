@@ -19,7 +19,7 @@ include_once ("controller.php");
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="news.css">
+    <link rel="stylesheet" href="all.css">
     <title>GameInfo Official Website</title>
 </head>
 <body>
@@ -33,19 +33,19 @@ include_once ("controller.php");
             </div>
             <div class="a_header">
                 <div class="adminHeaderA">
-                    <a class="a_header" href="">Home</a>
-                    <a class="a_header" href="">Category</a>
-                    <a class="a_header" href="">News</a>
-                    <a class="a_header" href="">HOT NEWS!</a>
-                    <a class="a_header" href="">Admin</a>
+                    <a class="a_header" href="index.php">Home</a>
+                    <a class="a_header" href="category.php">Category</a>
+                    <a class="a_header" href="news-page.php">News</a>
+                    <a class="a_header-hot" href="">HOT NEWS!</a>
+                    <a class="a_header" href="admin.php">Admin</a>
                 </div>
             </div>
-            <div class="header">
+            <!-- <div class="header">
                 <form action="">
                     <input class="inputSearch" type="text" name="search" value="Search">
                     <input class="buttonSubmit" type="submit" name="search" value="search">
                 </form>
-            </div>
+            </div> -->
         </header>
         <!--Halaman Utama -->
         <section class="container1">
@@ -57,7 +57,7 @@ include_once ("controller.php");
             <?php
                 include_once 'controller.php';
                 $conn = connect_database();
-                $sql = "SELECT post_id, article_post, article_date, article_admin, article_title FROM news";
+                $sql = "SELECT article_id, article_text, article_date, article_admin, article_title, article_category, article_image FROM article";
                 $result = $conn->query($sql);
 
                 if ($result->num_rows > 0) {
@@ -68,14 +68,18 @@ include_once ("controller.php");
                         echo '<br>';
                         echo '<hr class="solid">';
                         echo '<br>';
-                        echo '<p class="news-date">'.$row["article_date"].'   |   '.$row["article_admin"].'</p> ';
-                        echo '<p class="news_post">'.$row["article_post"].'</p>';
+                        echo '<p class="news-date">'.$row["article_date"].'   |   '.$row["article_admin"].'   |   '.$row["article_category"].'</p>';
+                        echo '<p class="news_post">'.$row["article_text"].'</p>';
+                        echo '';
+                        echo '<p class="news_image">'.$row["article_image"].'</p>';
                         echo '</div>';
+                        
                     }
                 }
 
             ?>
             
+            <img src=".row[" >
 
 
             <a href="edit.php">Edit</a>
@@ -128,7 +132,36 @@ include_once ("controller.php");
         </section>
   
     </div>
+
+                
+
     <div class="clear"></div>
+
+    
+    <div class="shareWhatsapp">
+        
+        <a href="https://www.facebook.com/"> <input type="button" value="Share to Facebook" class="share-fb"> </a> 
+        <input type="button" value="Share to WhatsApp" class="share-wa">
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false"><input type="button" value="">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        
+    </div>
+
+    <section>
+        <div class="comment-areapanel">
+            <h1>Comment</h1>
+            <br>
+            <form method="POST" action="addcomment.php">
+                <label for="name" >Name : </label>
+                <input type="text" name="name" class="comment-name"><br><br>
+                <label for="comment">Comment :</label><br>
+                <textarea name="comment" class="comment-text" cols="30" rows="10" ></textarea><br><br>
+                <input type="submit" name="submit" class="submit-comment">
+            </form>
+        </div>
+    
+    </section>
+
+
     <section>
         <footer>
             <div class="Footer">
@@ -142,8 +175,14 @@ include_once ("controller.php");
             <h4>Copyright 2021 | GameInfo</h4>
         </footer>
     </section>
+    
+    
+
 </body>
 </html>
+
+
+
 
 <?php 
 
@@ -154,13 +193,34 @@ include_once ("controller.php");
 	$newspost=$_POST['news_post'];
 	$date=$_POST['news_date'];
 	$title=$_POST['news_title'];
+    
 
 	
 	$result = mysqli_query($mysqli, "UPDATE users SET name='$newspost',date='$date',title='$title' WHERE id=$id");
 	
-	
 	// header("Location: index.php");
 }
 
-
 ?>
+
+<!--Comment-->
+<?php
+            include_once 'controller.php';
+            $conn = connect_database();
+            $sql = "SELECT id, name, comment FROM comment_section";
+            $result = $conn->query($sql);
+
+            if ($result->num_rows > 0){
+                while ($row = $result->fetch_assoc()){
+                    echo '<div class="latest-post1">';
+                    echo 'id : ' . $row["id"] . '<br>';
+                    echo 'name : ' . $row["name"] . '<br>';
+                    echo 'comment : ' . $row["comment"] . '<br>';
+                    echo '</div>';
+                }
+            }else{
+                echo "0 results";
+            }
+
+            $conn->close();
+        ?>
