@@ -57,7 +57,7 @@ include_once ("controller.php");
             <?php
                 include_once 'controller.php';
                 $conn = connect_database();
-                $sql = "SELECT article_id, article_text, article_date, article_admin, article_title, article_category FROM article";
+                $sql = "SELECT article_id, article_text, article_date, article_admin, article_title, article_category, article_image FROM article";
                 $result = $conn->query($sql);
 
                 if ($result->num_rows > 0) {
@@ -70,12 +70,16 @@ include_once ("controller.php");
                         echo '<br>';
                         echo '<p class="news-date">'.$row["article_date"].'   |   '.$row["article_admin"].'   |   '.$row["article_category"].'</p>';
                         echo '<p class="news_post">'.$row["article_text"].'</p>';
+                        echo '';
+                        echo '<p class="news_image">'.$row["article_image"].'</p>';
                         echo '</div>';
+                        
                     }
                 }
 
             ?>
             
+            <img src=".row[" >
 
 
             <a href="edit.php">Edit</a>
@@ -135,18 +139,10 @@ include_once ("controller.php");
 
     
     <div class="shareWhatsapp">
-        <form action="" method="post">
-            <input type="button" value="Share to Facebook" class="share-fb">  
-        </form>
-
-        <form action="" method="post">
-            <input type="button" value="Share to WhatsApp" class="share-wa">
-        </form>
-
-        <form action="" method="post"></form>
-         
         
-        <input type="button" value=""><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <a href="https://www.facebook.com/"> <input type="button" value="Share to Facebook" class="share-fb"> </a> 
+        <input type="button" value="Share to WhatsApp" class="share-wa">
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false"><input type="button" value="">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         
     </div>
 
@@ -197,6 +193,7 @@ include_once ("controller.php");
 	$newspost=$_POST['news_post'];
 	$date=$_POST['news_date'];
 	$title=$_POST['news_title'];
+    
 
 	
 	$result = mysqli_query($mysqli, "UPDATE users SET name='$newspost',date='$date',title='$title' WHERE id=$id");
