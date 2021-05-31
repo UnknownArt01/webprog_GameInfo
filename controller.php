@@ -1,9 +1,9 @@
 <?php
-    function connect_database($connect){
+    function connect_database(){
         $dbhost = "localhost";
         $dbuser = "root";
         $dbpass = "";
-        $db = "project";
+        $db = "gait1542_gameinfo";
 
         $connect = mysqli_connect($dbhost, $dbuser, $dbpass, $db) or die ("Error  Connecting to Database");
 
@@ -13,4 +13,7 @@
     function close_connection($x){
         mysqli_close($x);
     }
+
+
+    
 ?>
