@@ -129,7 +129,6 @@
         </footer>
 
     </section> -->
-    </div>
     <div class="clear"></div>
     <section>
         <footer>
@@ -145,5 +144,5 @@
         </footer>
     </section>
 </body>
-
 </html>
+
