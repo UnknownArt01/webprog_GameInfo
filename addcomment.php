@@ -2,7 +2,7 @@
     include_once 'dbcontroller.php';
 
     $conn = connect_database();
-    $id = $_POST['id'];
+    $id = $_GET['id'];
     $name = $_POST['name'];
     $comment = $_POST['comment'];
     

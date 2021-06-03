@@ -52,25 +52,30 @@ include_once ("dbcontroller.php");
             <div class="div1-left">
             </div>
         </section>
-       
 
             <?php
                 $conn = connect_database();
-                $sql = "SELECT article_id, article_text, article_date, article_admin, article_title, article_category, article_image FROM article";
+                $articleID = $_GET['id'];
+                $sql = "SELECT * FROM article WHERE article_id = '3'";
                 $result = $conn->query($sql);
 
                 if ($result->num_rows > 0) {
                     while ($row = $result ->fetch_assoc()){
-                        
+                        echo '<br>';
+                        echo '<br>';
                         echo '<div class="isi-post">';
                         echo '<h1>'.$row["article_title"].'</h1>'; 
                         echo '<br>';
                         echo '<hr class="solid">';
                         echo '<br>';
                         echo '<p class="news-date">'.$row["article_date"].'   |   '.$row["article_admin"].'   |   '.$row["article_category"].'</p>';
+                        echo '<br>';
+                        echo '<br>';
+                        echo '<img src="'.$row["article_image"].'">';
+                        echo '<br>';
+                        echo '<br>';
                         echo '<p class="news_post">'.$row["article_text"].'</p>';
                         echo '';
-                        echo '<img src="'.$row["article_image"].'">';
                         echo '</div>';
                         
                     }
@@ -149,6 +154,26 @@ include_once ("dbcontroller.php");
                 <input type="submit" name="submit" class="submit-comment">
             </form>
         </div>
+        <br>
+        <br>
+        <?php
+            $sql = "SELECT * FROM comment WHERE article_id = '3'";
+            $result = $conn->query($sql);
+
+            if ($result->num_rows > 0){
+                while ($row = $result->fetch_assoc()){
+                    echo '<div class="latest-post1">';
+                    echo 'id : ' . $row["id"] . '<br>';
+                    echo 'name : ' . $row["name"] . '<br>';
+                    echo 'comment : ' . $row["comment"] . '<br>';
+                    echo '</div>';
+                }
+            }else{
+                echo "0 results";
+            }
+
+            $conn->close();
+        ?>
     
     </section>
 
@@ -173,28 +198,7 @@ include_once ("dbcontroller.php");
 </html>
 
 
-
-
-<?php 
-
-    if(isset($_POST['update'])) {
-        	
-	$id = $_POST['post_id'];
-	
-	$newspost=$_POST['news_post'];
-	$date=$_POST['news_date'];
-	$title=$_POST['news_title'];
-    
-
-	
-	$result = mysqli_query($mysqli, "UPDATE users SET name='$newspost',date='$date',title='$title' WHERE id=$id");
-	
-	// header("Location: index.php");
-}
-
-?>
-
-<!--Comment-->
+<!-- Comment
 <?php
             $sql = "SELECT id, name, comment FROM comment_section";
             $result = $conn->query($sql);
@@ -212,4 +216,4 @@ include_once ("dbcontroller.php");
             }
 
             $conn->close();
-        ?>
+        ?> -->
