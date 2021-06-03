@@ -1,6 +1,6 @@
 <?php
 
-include_once ("controller.php");
+include_once ("dbcontroller.php");
 
 
 ?>
@@ -55,7 +55,6 @@ include_once ("controller.php");
        
 
             <?php
-                include_once 'controller.php';
                 $conn = connect_database();
                 $sql = "SELECT article_id, article_text, article_date, article_admin, article_title, article_category, article_image FROM article";
                 $result = $conn->query($sql);
@@ -71,21 +70,13 @@ include_once ("controller.php");
                         echo '<p class="news-date">'.$row["article_date"].'   |   '.$row["article_admin"].'   |   '.$row["article_category"].'</p>';
                         echo '<p class="news_post">'.$row["article_text"].'</p>';
                         echo '';
-                        echo '<p class="news_image">'.$row["article_image"].'</p>';
+                        echo '<img src="'.$row["article_image"].'">';
                         echo '</div>';
                         
                     }
                 }
 
-            ?>
-            
-            <img src=".row[" >
-
-
-            <a href="edit.php">Edit</a>
-            
-            <input type="submit" value="Edit">
-
+            ?>           
 
             <div class="clear"></div>
 
@@ -205,8 +196,6 @@ include_once ("controller.php");
 
 <!--Comment-->
 <?php
-            include_once 'controller.php';
-            $conn = connect_database();
             $sql = "SELECT id, name, comment FROM comment_section";
             $result = $conn->query($sql);
 

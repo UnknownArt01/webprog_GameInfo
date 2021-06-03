@@ -20,8 +20,8 @@
 
     <h1>Delete Category</h1>
     <form action="deletecategory.php" method="POST">
-    <?php
-        include 'controller.php';
+        <?php
+        include'dbcontroller.php';
 
         $conn = connect_database();
 
@@ -29,25 +29,68 @@
         $result = $conn -> query($sql);
 
         if ($result->num_rows > 0){?>
-            <label for="selectCategory">Select Category</label>
-            <select name="selectCategory">
-                <?php
+        <label for="selectCategory">Select Category</label>
+        <select name="selectCategory">
+            <?php
                     while ($row = $result->fetch_assoc()){
                 ?>
-                <option value="<?php echo $row["category_id"]; ?>"><?php echo $row["category_name"]; ?></option>
-                <?php
+            <option value="<?php echo $row["category_id"]; ?>"><?php echo $row["category_name"]; ?></option>
+            <?php
                     }
                 ?>
-            </select>
-            <br><br>
-            <input type="submit" name="deleteCategory" value="Delete">
-        </form>
-        <?php
+        </select>
+        <br><br>
+        <input type="submit" name="deleteCategory" value="Delete">
+    </form>
+    <?php
         } else {
             echo "0 results";
-        }
-        close_connection($conn);    
+        }   
     ?>
+
+    <br>
+
+    <h1>Edit Category</h1>
+    <table border="1" cellspacing="0" cellpadding="10">
+        <tr>
+            <td>No</td>
+            <td>Nama Category</td>
+            <td>Action</td>
+        </tr>
+        <?php
+
+            $sql = "SELECT category_id,category_name FROM category";
+            $result = $conn -> query($sql);
+
+            $i = 1;
+
+            if($result->num_rows > 0){
+                while($row = $result->fetch_assoc()){?>
+                    <tr>
+                        <td>
+                            <?php echo $i?>
+                        </td>
+                        <td>
+                            <?php echo $row["category_name"]?>
+                        </td>
+                        <td>
+                            <a href="/UAS/webprog_GameInfo/editcatpanel.php?id=<?php echo $row["category_id"]?>">Edit</a>
+                        </td>
+                    </tr>
+                <?php
+                $i++;
+                }
+            } else {
+                echo "0 result";
+            } close_connection($conn);
+
+            ?>
+    </table>
+
+    <br>
+
+    <h1>Add Post</h1>
+    
 </body>
 
 </html>

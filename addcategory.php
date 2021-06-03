@@ -1,5 +1,5 @@
 <?php
-    include_once 'controller.php';
+    include_once 'dbcontroller.php';
 
     $conn = connect_database();
     $category = $_POST['inputCategory'];
