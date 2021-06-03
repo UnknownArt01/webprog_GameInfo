@@ -11,7 +11,7 @@
 <body>
 
     <?php
-    include_once 'controller.php';
+    include_once 'dbcontroller.php';
     $conn = connect_database();
     $sql = "SELECT article_id, article_text, article_date, article_admin, article_title, article_category, article_image FROM article";
     $result = $conn->query($sql);
@@ -58,7 +58,7 @@
     </table>
 
 
-    <form action="addpost.php" method="POST">
+    <form action="addpost.php" method="POST" enctype="multipart/form-data">
 
         <!-- ID :<input type="number" name="post_id" > <br> -->
         <!-- Tanggal :<input type="date" name="article_date" > <br> -->
@@ -78,22 +78,6 @@
         $sql2 = "SELECT category_id,category_name FROM category";
         $result = $conn -> query($sql2);
 
-        if(isset($_POST['submit'])) {
-            $filename = $_FILES['article_image']['name'];
-            $tempname = $_FILES['article_image']['tmp_name'];
-            $folder = "image/".$filename;
-
-
-
-            if(move_uploaded_file($tempname,$folder)) {
-                $message = "Image Uploaded";
-            } else {
-                $message = "Failed to Upload Image";
-            }
-        } 
-
-    
-
         if ($result->num_rows > 0){?>
         <label for="selectCategory">Select Category</label>
         <select name="selectCategory">
@@ -104,7 +88,6 @@
             <?php
                     }
                 ?>
-        </select>
         <br><br>
         <?php
         } else {

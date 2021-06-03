@@ -24,7 +24,7 @@
     <br>
     
         <?php
-            include_once 'controller.php';
+            include_once 'dbcontroller.php';
             $conn = connect_database();
             $sql = "SELECT id, name, comment FROM comment_section";
             $result = $conn->query($sql);

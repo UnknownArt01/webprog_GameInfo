@@ -1,6 +1,6 @@
 <?php
 
-include_once ("controller.php");
+include_once ("dbcontroller.php");
 
 
 ?>
@@ -52,40 +52,36 @@ include_once ("controller.php");
             <div class="div1-left">
             </div>
         </section>
-       
 
             <?php
-                include_once 'controller.php';
                 $conn = connect_database();
-                $sql = "SELECT article_id, article_text, article_date, article_admin, article_title, article_category, article_image FROM article";
+                $articleID = $_GET['id'];
+                $sql = "SELECT * FROM article WHERE article_id = '3'";
                 $result = $conn->query($sql);
 
                 if ($result->num_rows > 0) {
                     while ($row = $result ->fetch_assoc()){
-                        
+                        echo '<br>';
+                        echo '<br>';
                         echo '<div class="isi-post">';
                         echo '<h1>'.$row["article_title"].'</h1>'; 
                         echo '<br>';
                         echo '<hr class="solid">';
                         echo '<br>';
                         echo '<p class="news-date">'.$row["article_date"].'   |   '.$row["article_admin"].'   |   '.$row["article_category"].'</p>';
+                        echo '<br>';
+                        echo '<br>';
+                        echo '<img src="'.$row["article_image"].'">';
+                        echo '<br>';
+                        echo '<br>';
                         echo '<p class="news_post">'.$row["article_text"].'</p>';
                         echo '';
-                        echo '<p class="news_image">'.$row["article_image"].'</p>';
                         echo '</div>';
                         
                     }
                 }
 
-            ?>
-            
-            <img src=".row[" >
-
-
-            <a href="edit.php">Edit</a>
-            
-            <input type="submit" value="Edit">
-
+            ?>           
 
             <div class="clear"></div>
 
@@ -158,6 +154,26 @@ include_once ("controller.php");
                 <input type="submit" name="submit" class="submit-comment">
             </form>
         </div>
+        <br>
+        <br>
+        <?php
+            $sql = "SELECT * FROM comment WHERE article_id = '3'";
+            $result = $conn->query($sql);
+
+            if ($result->num_rows > 0){
+                while ($row = $result->fetch_assoc()){
+                    echo '<div class="latest-post1">';
+                    echo 'id : ' . $row["id"] . '<br>';
+                    echo 'name : ' . $row["name"] . '<br>';
+                    echo 'comment : ' . $row["comment"] . '<br>';
+                    echo '</div>';
+                }
+            }else{
+                echo "0 results";
+            }
+
+            $conn->close();
+        ?>
     
     </section>
 
@@ -182,31 +198,8 @@ include_once ("controller.php");
 </html>
 
 
-
-
-<?php 
-
-    if(isset($_POST['update'])) {
-        	
-	$id = $_POST['post_id'];
-	
-	$newspost=$_POST['news_post'];
-	$date=$_POST['news_date'];
-	$title=$_POST['news_title'];
-    
-
-	
-	$result = mysqli_query($mysqli, "UPDATE users SET name='$newspost',date='$date',title='$title' WHERE id=$id");
-	
-	// header("Location: index.php");
-}
-
-?>
-
-<!--Comment-->
+<!-- Comment
 <?php
-            include_once 'controller.php';
-            $conn = connect_database();
             $sql = "SELECT id, name, comment FROM comment_section";
             $result = $conn->query($sql);
 
@@ -223,4 +216,4 @@ include_once ("controller.php");
             }
 
             $conn->close();
-        ?>
+        ?> -->
