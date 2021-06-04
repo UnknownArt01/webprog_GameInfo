@@ -1,4 +1,10 @@
 <?php
+    session_start();
+    if (!isset($_SESSION['username'])){
+        header("Location: login.php");
+    }
+?>
+<?php
     include_once 'dbcontroller.php';
 
     $articleID = $_GET['id'];
