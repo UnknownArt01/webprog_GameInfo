@@ -14,27 +14,20 @@
     <div class="bodydiv">
         <!--Navigation Bar -->
         <header class="adminHeader">
-            <div class="header">
-                <h1 class="adminHeaderLogo">GameInfo</h1>
-                <div class="clear"></div>
-                <h4 class="adminHeaderLogo2">INFO MENARIK SEPUTAR GAME & TEKNOLOGI</h4>
-            </div>
-            <div class="a_header">
-                <div class="adminHeaderA">
-                    <a class="a_header" href="index.php">Home</a>
-                    <a class="a_header" href="category.php">Category</a>
-                    <a class="a_header" href="news-page.php">News</a>
-                    <a class="a_header-hot" href="">HOT NEWS!</a>
-                    <a class="a_header" href="admin.php">Admin</a>
-                </div>
-            </div>
-            <!-- <div class="header">
-                <form action="">
-                    <input class="inputSearch" type="text" name="search" value="Search">
-                    <input class="buttonSubmit" type="submit" name="search" value="search">
-                </form>
-            </div> -->
-        </header>
+            <nav>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbutton">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <img class="logo" src="img/logo_gameinfo-removebg-preview.png" alt="">
+
+                <ul class="adminHeaderA">
+                    <li><a class="a_header" href="index.php">Home</a></li>
+                    <li><a class="a_header" href="category.php">Category</a></li>
+                    <li><a class="a_header" href="news-page.php">News</a></li>
+                    <li><a class="a_header" href="admin.php">Admin</a></li>
+                </ul>
+            </nav>
         <!--Halaman Utama -->
         <section class="container1">
             <div class="div1-left">

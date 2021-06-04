@@ -267,7 +267,6 @@ footer h4 {
     margin: 20px;
     height: max-content;
     float: left;
-    
     border-radius: 20px;
 }
 
@@ -276,7 +275,6 @@ footer h4 {
     margin: 20px;
     height: max-content;
     /* float: left; */
-    
     border-radius: 20px;
 }
 
@@ -294,7 +292,6 @@ footer h4 {
     height: 400px;
     padding: 15px;
     float: right;
-    
     border-radius: 30px;
     font-size: 1vw;
     text-align: center;
@@ -426,16 +423,14 @@ div.latest-post3 {
 
 .postImage {
     height: 70%;
-    width: 10%;
+    width: 20%;
     float: left;
     background-color: grey;
     margin: 20px;
 }
 
-
 .ArticleHome {
     margin: 20px;
-    
 }
 
 .ArticleHome h2 {
@@ -649,7 +644,7 @@ div.latest-post3 {
         font-size: 2vw;
     }
     .postImage {
-        height: 15vw;
+        height: 125px;
         width: 15vw;
         float: left;
     }
@@ -674,7 +669,7 @@ div.latest-post3 {
         height: min-content;
     }
     .our-social-media h2 {
-        font-size: 2vw;
+        font-size: 1.5vw;
         margin-top: 1vw;
     }
     .img-ig {
@@ -694,12 +689,31 @@ div.latest-post3 {
         margin-top: 1vw;
     }
     div.latest-post1 {
-        height: max-content;
+        height: 200px;
     }
     div.latest-post2 {
-        height: max-content;
+        height: 200px;
     }
     div.latest-post3 {
-        height: max-content;
+        height: 200px;
+    }
+    /* share button */
+    .share-fb {
+        background-color: #3C589E;
+        width: 100px;
+        color: white;
+        height: 30px;
+        margin-left: 50px;
+    }
+    .share-wa {
+        background-color: green;
+        width: 100px;
+        color: white;
+        height: 30px;
+        margin-left: 10px;
+    }
+    .share-twitter {
+        width: 100px;
+        height: 30px;
     }
 }
