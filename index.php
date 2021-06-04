@@ -63,11 +63,11 @@
                 <div class="SmallHot1">
 
                 </div>
-                <div class="clear"></div>
+                <div class="clearhot"></div>
                 <div class="SmallHot2">
 
                 </div>
-                <div class="clear"></div>
+                <div class="clearhot"></div>
                 <div class="SmallHot3">
 
                 </div>
