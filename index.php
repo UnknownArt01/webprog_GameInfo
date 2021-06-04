@@ -22,6 +22,7 @@
     <div class="bodydiv">
         <!--Navigation Bar -->
         <header class="adminHeader">
+<<<<<<< HEAD
             <nav>
                 <input type="checkbox" id="check">
                 <label for="check" class="checkbutton">
@@ -52,15 +53,74 @@
         <div class="div1-left">
 
         </div>
+=======
+            <div class="header">
+                <h1 class="adminHeaderLogo">GameInfo</h1>
+                <div class="clear"></div>
+                <h4 class="adminHeaderLogo2">INFO MENARIK SEPUTAR GAME & TEKNOLOGI</h4>
+            </div>
+            <div class="a_header">
+            <div class="adminHeaderA">
+                    <a class="a_header" href="index.php">Home</a>
+                    <a class="a_header" href="category.php">Category</a>
+                    <a class="a_header" href="list-news.php">News</a>
+                    <a class="a_header-hot" href="">HOT NEWS!</a>
+                    <a class="a_header" href="admin.php">Admin</a>
+                </div>
+            </div>
+
+            <!-- <div class="header">
+                <form action="">
+                    <input class="inputSearch" type="search" name="search" value="Search">
+                    <input class="buttonSubmit" type="submit" name="search" value="search">
+                </form>
+            </div> -->
+        </header>
+        <!--Halaman Utama -->
+        <section class="container1">
+            <div class="div1-left">
+>>>>>>> fa566d3970bb9ef33d6cfe1bb8cd869c084cc800
 
     </section>
 
+<<<<<<< HEAD
     <section class="container2">
         <div class="HotNews">
             <div class="BiggestHot"></div>
             <div class="PhoneHot"></div>
             <div class="biggesthot2">
                 <div class="SmallHot1">
+=======
+        </section>
+
+        <section class="container2">
+            <div class="HotNews">
+                <div class="BiggestHot"></div>
+                <div class="biggesthot2">
+                    <div class="SmallHot1">
+                        
+                    </div>
+                    <div class="clear"></div>
+                    <div class="SmallHot2">
+                        
+                    </div>
+                    <div class="clear"></div>
+                    <div class="SmallHot3">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="latest-post">
+                <h1>LATEST POST</h1>
+                
+                <div class="latest-post1">
+                    <div class="postImage"></div>
+                    <div class="ArticleHome">
+                        <h2>Selyandaru Akhirnya Tidak Jomblo</h2>
+                        <p>lorem</p>
+                    </div>
+>>>>>>> fa566d3970bb9ef33d6cfe1bb8cd869c084cc800
 
                 </div>
                 <div class="clearhot"></div>

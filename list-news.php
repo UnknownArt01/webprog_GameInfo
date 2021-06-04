@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="all.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="listnews.css">
+    <title>News List</title>
 </head>
+
 <body>
-<div class="bodydiv">
+    <div class="bodydiv">
         <!--Navigation Bar -->
         <header class="adminHeader">
             <div class="header">
@@ -37,69 +40,56 @@
             <div class="div1-left">
             </div>
         </section>
-       
+        <br><br>
+        <div class="latest-post-list">
+            <h1>News</h1>
+
 
             <?php
-                include_once 'controller.php';
+                include_once 'dbcontroller.php';
+                // $articleID = $_GET['id'];
                 $conn = connect_database();
-                $sql = "SELECT article_id, article_text, article_date, article_admin, article_title, article_category, article_image FROM article";
+                $sql = "SELECT * FROM article ORDER BY article_date DESC";
                 $result = $conn->query($sql);
 
                 if ($result->num_rows > 0) {
-                    while ($row = $result ->fetch_assoc()){
-                        
-                        echo '<div class="isi-post">';
-                        echo '<h1>'.$row["article_title"].'</h1>'; 
-                        echo '<br>';
-                        echo '<hr class="solid">';
-                        echo '<br>';
-                        echo '<p class="news-date">'.$row["article_date"].'   |   '.$row["article_admin"].'   |   '.$row["article_category"].'</p>';
-                        echo '<p class="news_post">'.$row["article_text"].'</p>';
-                        echo '';
-                        echo '<p class="news_image">'.$row["article_image"].'</p>';
-                        echo '</div>';
-                        
+                    while ($row = $result ->fetch_assoc()){?>
+            <div class="latest-post1-list">
+                <div class="postImage">
+                    <img src="<?php echo $row["article_image"]?>" width="140" height="min-height">
+                </div>
+                <div class="ArticleHome">
+                    <h2><?php echo $row["article_title"]?></h2>
+                    <p class="news-date"><?php echo $row["article_date"]?> | <?php echo $row["article_admin"]?> |
+                        <?php echo $row["article_category"]?></p>
+                    <a href="/UAS/webprog_GameInfo/news-page.php?id=<?php echo $row["article_id"]?>"><input
+                            type="button" value="SELENGKAPNYA" class="button_post1"></a>
+                </div>
+            </div>
+            <?php
                     }
                 }
 
             ?>
-            
-            <img src=".row[" >
+        </div>
 
 
-            <a href="edit.php">Edit</a>
-            
-            <input type="submit" value="Edit">
+    </div>
+    <div class="clear"></div>
 
-
+    <section>
+        <footer>
+            <div class="Footer">
+                <h1 class="adminFooterLogo">GameInfo</h1>
+                <div class="clear"></div>
+                <h4 class="adminFooterLogo2">INFO MENARIK SEPUTAR GAME & TEKNOLOGI</h4>
+            </div>
             <div class="clear"></div>
-
-            <div class="latest-post">
-                <h1>LATEST POST</h1>
-                <br>
-                <div class="latest-post1">
-                    <div class="postImage"></div>
-                    <div class="ArticleHome">
-                        <h3>Selyandaru Akhirnya Tidak Jomblo</h2>
-                        <p>lorem</p>
-                    </div>
-                </div>
-                <div class="latest-post2">
-                    <div class="postImage"></div>
-                    <div class="ArticleHome">
-                        <h3>Rafi Masuk Nominal Tertampan IMT?</h2>
-                        <p>lorem</p>
-                    </div>
-                </div>
-                <div class="latest-post3">
-                    <div class="postImage"></div>
-                    <div class="ArticleHome">
-                        <h3>Seorang Programmer Terkena Tipes</h2>
-                        
-                    </div>
-                </div>
-            </div>
-
-            </div>
+            <br>
+            <hr>
+            <h4>Copyright 2021 | GameInfo</h4>
+        </footer>
+    </section>
 </body>
+
 </html>

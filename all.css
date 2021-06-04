@@ -267,6 +267,16 @@ footer h4 {
     margin: 20px;
     height: max-content;
     float: left;
+    
+    border-radius: 20px;
+}
+
+.latest-post-list {
+    width: 93%;
+    margin: 20px;
+    height: max-content;
+    /* float: left; */
+    
     border-radius: 20px;
 }
 
@@ -278,12 +288,13 @@ footer h4 {
 }
 
 .our-social-media {
-    padding-top: 60px;
+    padding-top: px;
     margin: 20px;
     width: 30%;
     height: 400px;
     padding: 15px;
     float: right;
+    
     border-radius: 30px;
     font-size: 1vw;
     text-align: center;
@@ -414,15 +425,23 @@ div.latest-post3 {
 }
 
 .postImage {
-    height: 80%;
-    width: 20%;
+    height: 70%;
+    width: 10%;
     float: left;
     background-color: grey;
     margin: 20px;
 }
 
+
 .ArticleHome {
     margin: 20px;
+    
+}
+
+.ArticleHome h2 {
+    font-size: x-large;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
 }
 
 
