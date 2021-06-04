@@ -255,12 +255,13 @@ footer h4 {
 }
 
 .our-social-media {
-    padding-top: 60px;
+    padding-top: px;
     margin: 20px;
     width: 30%;
     height: 400px;
     padding: 15px;
     float: right;
+    
     border-radius: 30px;
     font-size: 1vw;
     text-align: center;

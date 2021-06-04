@@ -35,12 +35,12 @@
                 </div>
             </div>
 
-            <div class="header">
+            <!-- <div class="header">
                 <form action="">
                     <input class="inputSearch" type="search" name="search" value="Search">
                     <input class="buttonSubmit" type="submit" name="search" value="search">
                 </form>
-            </div>
+            </div> -->
         </header>
         <!--Halaman Utama -->
         <section class="container1">
@@ -70,7 +70,7 @@
             <div class="clear"></div>
             <div class="latest-post">
                 <h1>LATEST POST</h1>
-                <br>
+                
                 <div class="latest-post1">
                     <div class="postImage"></div>
                     <div class="ArticleHome">
