@@ -1,10 +1,7 @@
 <?php
-    include_once 'dbcontroller.php';
+    include_once 'controller.php';
 
     $delete = $_GET['id'];
-
-    $conn = connect_database();
-    $sql = "DELETE FROM article WHERE article_id = '$delete'";
-    $conn -> query($sql);
+    deletearticle($delete);
     header('location:panel.php');
 ?>

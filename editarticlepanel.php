@@ -18,15 +18,14 @@
 
 <body>
     <h1>Edit Article</h1>
-    <form action="" method="POST">
+    <form action="editarticle.php" method="POST" enctype="multipart/form-data">
+    <input type="hidden" name="article_id" value="<?php echo $articleID?>">
+    Gambar : <input type="file" name="article_image"> <br><br>
         <?php
         if($result->num_rows > 0){
             while($row = $result->fetch_assoc()){?>
         Judul : <input type="text" name="article_title" value="<?php echo $row["article_title"]?>"><br><br>
         Admin : <input type="text" name="article_admin" value="<?php echo $row["article_admin"]?>"><br><br>
-
-        Gambar : <input type="file" name="article_image"> <br><br>
-
         Isi Artikel : <textarea name="article_text" cols="30" rows="10"><?php echo $row["article_text"]?></textarea> <br><br>
         <?php
             }

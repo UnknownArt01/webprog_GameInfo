@@ -20,6 +20,7 @@ include_once ("dbcontroller.php");
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="all.css">
+    <link rel="stylesheet" href="listnews.css">
     <title>GameInfo Official Website</title>
 </head>
 <body>
@@ -61,6 +62,7 @@ include_once ("dbcontroller.php");
 
                 if ($result->num_rows > 0) {
                     while ($row = $result ->fetch_assoc()){
+                        $part = explode('.', $row["article_text"]);
                         echo '<br>';
                         echo '<br>';
                         echo '<div class="isi-post">';
@@ -74,7 +76,12 @@ include_once ("dbcontroller.php");
                         echo '<img src="'.$row["article_image"].'" width="150">';
                         echo '<br>';
                         echo '<br>';
-                        echo '<p class="news_post">'.$row["article_text"].'</p>';
+                        for ($i = 0; $i < count($part); $i++){  
+                            print '<p class="news_post">'.$part[$i].'.</p>';
+                            echo '<br>';
+                        }
+                        echo '<br>';
+                        echo '<br>';
                         echo '';
                         echo '</div>';
                         
@@ -88,27 +95,31 @@ include_once ("dbcontroller.php");
             <div class="latest-post">
                 <h1>LATEST POST</h1>
                 <br>
-                <div class="latest-post1">
-                    <div class="postImage"></div>
-                    <div class="ArticleHome">
-                        <h3>Selyandaru Akhirnya Tidak Jomblo</h2>
-                        <p>lorem</p>
-                    </div>
-                </div>
-                <div class="latest-post2">
-                    <div class="postImage"></div>
-                    <div class="ArticleHome">
-                        <h3>Rafi Masuk Nominal Tertampan IMT?</h2>
-                        <p>lorem</p>
-                    </div>
-                </div>
-                <div class="latest-post3">
-                    <div class="postImage"></div>
-                    <div class="ArticleHome">
-                        <h3>Seorang Programmer Terkena Tipes</h2>
-                        
-                    </div>
-                </div>
+                <?php
+
+                    $sql = "SELECT * FROM article ORDER BY article_date DESC LIMIT 3";
+                    $result = $conn->query($sql);
+
+                    if ($result->num_rows > 0) {
+                        while ($row = $result ->fetch_assoc()){?>
+                        <div class="latest-post1">
+                            <div class="postImage">
+                                <img src="<?php echo $row["article_image"]?>">
+                            </div>
+                            <div class="ArticleHome">
+                                <h2><?php echo $row["article_title"]?></h2>
+                                <p class="news-date">
+                                    <?php echo $row["article_date"]?> | <?php echo $row["article_admin"]?> | <?php echo $row["article_category"]?>
+                                </p>
+                                <a href="/UAS/webprog_GameInfo/news-page.php?id=<?php echo $row["article_id"]?>">
+                                    <input type="button" value="SELENGKAPNYA" class="button_post1">
+                                </a>
+                            </div>
+                        </div>
+                        <?php
+                        }
+                    }
+                ?>
             </div>
             <div class="our-social-media">
                 <h1>OUR SOCIAL MEDIA!</h1>
@@ -151,6 +162,7 @@ include_once ("dbcontroller.php");
                 <input type="text" name="name" class="comment-name"><br><br>
                 <label for="comment">Comment :</label><br>
                 <textarea name="comment" class="comment-text" cols="30" rows="10" ></textarea><br><br>
+                <input type="hidden" name="article_id" value="<?php echo $articleID ?>">
                 <input type="submit" name="submit" class="submit-comment">
             </form>
         </div>
@@ -161,17 +173,14 @@ include_once ("dbcontroller.php");
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0){
-                while ($row = $result->fetch_assoc()){
-                    echo '<div class="latest-post1">';
-                    echo 'id : ' . $row["id"] . '<br>';
-                    echo 'name : ' . $row["name"] . '<br>';
-                    echo 'comment : ' . $row["comment"] . '<br>';
-                    echo '</div>';
+                while ($row = $result->fetch_assoc()){?>
+                    <div class="latest-post1">
+                    name : <?php echo $row["name"]?> <br>
+                    comment : <?php echo $row["comment"]?><br>
+                    </div>
+                <?php
                 }
-            }else{
-                echo "0 results";
             }
-
             $conn->close();
         ?>
     

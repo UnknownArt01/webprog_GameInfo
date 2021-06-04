@@ -398,11 +398,22 @@ div.latest-post3 {
 
 
 .postImage {
-    height: 70%;
-    width: 10%;
+    height: 80%;
+    width: 20%;
     float: left;
     background-color: grey;
     margin: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.postImage img{
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    right: -9999px;
+    bottom: -9999px;
+    margin: auto;
 }
 
 
