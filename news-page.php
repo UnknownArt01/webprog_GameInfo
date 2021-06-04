@@ -83,14 +83,14 @@ include_once ("dbcontroller.php");
                 <h1>LATEST POST</h1>
                 <br>
                 <div class="latest-post1">
-                    <div class="postImage"></div>
+                    <div class="postImage"><img class="postImageimg" src="img\img-60b9bd70496999.83305970.png" alt=""></div>
                     <div class="ArticleHome">
                         <h3>Selyandaru Akhirnya Tidak Jomblo</h2>
                         <p>lorem</p>
                     </div>
                 </div>
                 <div class="latest-post2">
-                    <div class="postImage"></div>
+                    <div class="postImage"><img class="postImageimg" src="img\img-60b9be4fdf6f33.49396398.png" alt=""></div>
                     <div class="ArticleHome">
                         <h3>Rafi Masuk Nominal Tertampan IMT?</h2>
                         <p>lorem</p>

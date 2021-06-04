@@ -429,6 +429,11 @@ div.latest-post3 {
     margin: 20px;
 }
 
+.postImageimg {
+    height: 300px;
+    width: 300px;
+}
+
 .ArticleHome {
     margin: 20px;
 }
