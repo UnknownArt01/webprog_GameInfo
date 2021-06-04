@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="all.css">
+    <link rel="stylesheet" href="listnews.css">
     <title>Document</title>
 </head>
 <body>
@@ -40,7 +41,7 @@
        
 
             <?php
-                include_once 'controller.php';
+                include_once 'dbcontroller.php';
                 $conn = connect_database();
                 $sql = "SELECT article_id, article_text, article_date, article_admin, article_title, article_category, article_image FROM article";
                 $result = $conn->query($sql);
@@ -66,40 +67,83 @@
             
             <img src=".row[" >
 
-
             <a href="edit.php">Edit</a>
             
             <input type="submit" value="Edit">
 
-
             <div class="clear"></div>
 
             <div class="latest-post">
-                <h1>LATEST POST</h1>
-                <br>
-                <div class="latest-post1">
+                <h1>News</h1>
+                <div class="latest-post1-list">
                     <div class="postImage"></div>
                     <div class="ArticleHome">
-                        <h3>Selyandaru Akhirnya Tidak Jomblo</h2>
-                        <p>lorem</p>
+                        <h2>Selyandaru Akhirnya Tidak Jomblo</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque alias laborum vero quaerat temporibus magni dicta maiores nisi amet quos atque velit corrupti fugiat laudantium animi eos, nobis rem. Quisquam.</p>
+                        <a href=""><input type="button" value="SELENGKAPNYA" class="button_post1"></a>
                     </div>
                 </div>
-                <div class="latest-post2">
+                <div class="latest-post2-list">
                     <div class="postImage"></div>
                     <div class="ArticleHome">
-                        <h3>Rafi Masuk Nominal Tertampan IMT?</h2>
-                        <p>lorem</p>
+                        <h2>Rafi Masuk Nominal Tertampan IMT?</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim veniam, fugiat vitae a commodi provident voluptas inventore? Blanditiis sequi, id, accusamus iste in sapiente doloremque incidunt sunt molestiae soluta tenetur!</p>
+                        <a href=""><input type="button" value="SELENGKAPNYA" class="button_post1"></a>
                     </div>
                 </div>
-                <div class="latest-post3">
+                <div class="latest-post3-list">
                     <div class="postImage"></div>
                     <div class="ArticleHome">
-                        <h3>Seorang Programmer Terkena Tipes</h2>
+                        <h2>Seorang Programmer Terkena Tipes</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quia architecto ipsa quas nam nulla hic, provident soluta pariatur amet, nesciunt aperiam maxime atque ipsam quos. Enim accusamus impedit perspiciatis.</p>
+                        <a href=""><input type="button" value="SELENGKAPNYA" class="button_post1"></a>
                         
                     </div>
                 </div>
+                
+                <div class="latest-post4-list">
+                    <div class="postImage"></div>
+                    <div class="ArticleHome">
+                        <h2>Seorang Programmer Terkena Tipes</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quia architecto ipsa quas nam nulla hic, provident soluta pariatur amet, nesciunt aperiam maxime atque ipsam quos. Enim accusamus impedit perspiciatis.</p>
+                        <a href=""><input type="button" value="SELENGKAPNYA" class="button_post1"></a>
+                        
+                    </div>
+                </div>
+
+                <div class="latest-post5-list">
+                    <div class="postImage"></div>
+                    <div class="ArticleHome">
+                        <h2>Seorang Programmer Terkena Tipes</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quia architecto ipsa quas nam nulla hic, provident soluta pariatur amet, nesciunt aperiam maxime atque ipsam quos. Enim accusamus impedit perspiciatis.</p>
+                        <a href=""><input type="button" value="SELENGKAPNYA" class="button_post1"></a>
+                        
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="page_number">
+                NOMOR HALAMAN
+
             </div>
 
             </div>
+
+
+            <section>
+        <footer>
+            <div class="Footer">
+                <h1 class="adminFooterLogo">GameInfo</h1>
+                <div class="clear"></div>
+                <h4 class="adminFooterLogo2">INFO MENARIK SEPUTAR GAME & TEKNOLOGI</h4>
+            </div>
+            <div class="clear"></div>
+            <br>
+            <hr>
+            <h4>Copyright 2021 | GameInfo</h4>
+        </footer>
+    </section>
 </body>
 </html>
