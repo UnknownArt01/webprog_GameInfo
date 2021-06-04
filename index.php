@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="all.css">
+    
 
     <title>GameInfo Official Website</title>
 </head>
@@ -52,7 +53,10 @@
 
         <section class="container2">
             <div class="HotNews">
-                <div class="BiggestHot"></div>
+                <div class="BiggestHot">
+                
+
+                </div>
                 <div class="biggesthot2">
                     <div class="SmallHot1">
                         
@@ -80,7 +84,7 @@
 
                 </div>
 
-                <div class="latest-post2">
+                <div class="latest-post1">
                     <div class="postImage"></div>
                     <div class="ArticleHome">
                         <h2>Rafi Masuk Nominal Tertampan IMT?</h2>
@@ -89,8 +93,10 @@
 
                 </div>
 
-                <div class="latest-post3">
-                    <div class="postImage"></div>
+                <div class="latest-post1">
+                    <div class="postImage">
+                        <img src="<?php echo $row["article_image"]?>" >
+                    </div>
                     <div class="ArticleHome">
                         <h2>Seorang Programmer Terkena Tipes</h2>
                         <p>lorem</p>
@@ -123,11 +129,7 @@
 
         </section>
 
-        <!-- <section>
-        <footer>
-            <h4>Copyright 2021 | GameInfo</h4>
-        </footer>
-    </section> -->
+      
     </div>
     <div class="clear"></div>
     <section>
