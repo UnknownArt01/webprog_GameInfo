@@ -73,7 +73,7 @@
 
             <div class="clear"></div>
 
-            <div class="latest-post">
+            <div class="latest-post-list">
                 <h1>News</h1>
                 <div class="latest-post1-list">
                     <div class="postImage"></div>

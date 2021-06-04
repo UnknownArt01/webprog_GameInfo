@@ -230,6 +230,15 @@ footer h4 {
 /* latest post index.php and social media */
 
 .latest-post {
+    width: 59%;
+    margin: 20px;
+    height: max-content;
+    float: left;
+    
+    border-radius: 20px;
+}
+
+.latest-post-list {
     width: 93%;
     margin: 20px;
     height: max-content;
