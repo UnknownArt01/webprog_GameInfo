@@ -398,12 +398,13 @@ div.latest-post3 {
 
 
 .postImage {
-    height: 80%;
-    width: 20%;
+    height: 70%;
+    width: 10%;
     float: left;
     background-color: grey;
     margin: 20px;
 }
+
 
 .ArticleHome {
     margin: 20px;

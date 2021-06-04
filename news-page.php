@@ -56,7 +56,7 @@ include_once ("dbcontroller.php");
             <?php
                 $conn = connect_database();
                 $articleID = $_GET['id'];
-                $sql = "SELECT * FROM article WHERE article_id = '3'";
+                $sql = "SELECT * FROM article WHERE article_id = '$articleID'";
                 $result = $conn->query($sql);
 
                 if ($result->num_rows > 0) {
@@ -71,7 +71,7 @@ include_once ("dbcontroller.php");
                         echo '<p class="news-date">'.$row["article_date"].'   |   '.$row["article_admin"].'   |   '.$row["article_category"].'</p>';
                         echo '<br>';
                         echo '<br>';
-                        echo '<img src="'.$row["article_image"].'">';
+                        echo '<img src="'.$row["article_image"].'" width="150">';
                         echo '<br>';
                         echo '<br>';
                         echo '<p class="news_post">'.$row["article_text"].'</p>';
@@ -157,7 +157,7 @@ include_once ("dbcontroller.php");
         <br>
         <br>
         <?php
-            $sql = "SELECT * FROM comment WHERE article_id = '3'";
+            $sql = "SELECT * FROM comment WHERE article_id = '$articleID'";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0){
