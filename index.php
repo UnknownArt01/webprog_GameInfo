@@ -27,7 +27,11 @@
                 <label for="check" class="checkbutton">
                     <i class="fas fa-bars"></i>
                 </label>
-                <img class="logo" src="img/logo_gameinfo-removebg-preview.png" alt="">
+                <div class="header">
+                    <h1 class="adminHeaderLogo">GameInfo</h1>
+                    <div class="clear"></div>
+                    <h4 class="adminHeaderLogo2">INFO MENARIK SEPUTAR GAME & TEKNOLOGI</h4>
+                </div>
 
                 <ul class="adminHeaderA">
                     <li><a class="a_header" href="index.php">Home</a></li>
@@ -44,15 +48,11 @@
                 <a class="a_header-hot" href="">HOT NEWS!</a>
                 <a class="a_header" href="admin.php">Admin</a>
             </div> -->
+        </header>
     </div>
-    </header>
+
     <!--Halaman Utama -->
-    <section class="container1">
-        <div class="div1-left">
 
-        </div>
-
-    </section>
 
     <section class="container2">
         <div class="HotNews">
