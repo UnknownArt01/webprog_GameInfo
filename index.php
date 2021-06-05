@@ -54,24 +54,48 @@
     <!--Halaman Utama -->
 
 
-    <section class="container2">
+
+    <!-- <section class="container2"> -->
         <div class="HotNews">
-            <div class="BiggestHot"></div>
-            <div class="PhoneHot"></div>
-            <div class="biggesthot2">
-                <div class="SmallHot1">
+            <div class="unknown">
+                <div class="slider">
+                    <div class="sliders">
+                        <input type="radio" name="radio-btn" id="radio1">
+                        <input type="radio" name="radio-btn" id="radio2">
+                        <input type="radio" name="radio-btn" id="radio3">
+                        <input type="radio" name="radio-btn" id="radio4">
+                        <input type="radio" name="radio-btn" id="radio5">
 
-                </div>
-                <div class="clearhot"></div>
-                <div class="SmallHot2">
-
-                </div>
-                <div class="clearhot"></div>
-                <div class="SmallHot3">
-
-                </div>
-            </div>
+                        <div class="slide first">
+                            <img src="img\pict1.jpg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="img\pict2.jpg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="img\pict3.jpg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="img\re8vil.jpg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="img\town.jpg" alt="">
+                        </div>
+                    </div>
+                    <!--MANUAL NAV START-->
+                    <div class="navigation-manual">
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2" class="manual-btn"></label>
+                        <label for="radio3" class="manual-btn"></label>
+                        <label for="radio4" class="manual-btn"></label>
+                        <label for="radio5" class="manual-btn"></label>
+                    </div>
+                </div>    
+            </div>    
+        
         </div>
+    <!-- </section> -->
+        
         <div class="clear"></div>
         <div class="latest-post">
             <h1>LATEST POST</h1>
