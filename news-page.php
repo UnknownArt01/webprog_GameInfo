@@ -37,8 +37,7 @@ include_once ("dbcontroller.php");
                 <ul class="adminHeaderA">
                     <li><a class="a_header" href="index.php">Home</a></li>
                     <li><a class="a_header" href="category.php">Category</a></li>
-                    <li><a class="a_header" href="news-page.php">News</a></li>
-                    <li class="a_header-hot"><a href="">HOT NEWS!</a></li>
+                    <li><a class="a_header" href="list-news.php">News</a></li>
                     <li><a class="a_header" href="admin.php">Admin</a></li>
                 </ul>
             </nav>
