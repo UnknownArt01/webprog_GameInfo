@@ -314,7 +314,7 @@ div.socmed-facebook {
     height: 70px;
     border-radius: 15px;
     color: white;
-    box-shadow: 5px 5px 5px 5px grey;
+    box-shadow: 2px 2px 2px 2px grey;
 }
 
 div.socmed-youtube {
@@ -323,7 +323,7 @@ div.socmed-youtube {
     padding: 2%;
     height: 70px;
     border-radius: 15px;
-    box-shadow: 5px 5px 5px 5px grey;
+    box-shadow: 2px 2px 2px 2px grey;
 }
 
 div.socmed-instagram {
@@ -332,7 +332,7 @@ div.socmed-instagram {
     padding: 2%;
     height: 70px;
     border-radius: 15px;
-    box-shadow: 5px 5px 5px 5px grey;
+    box-shadow: 2px 2px 2px 2px grey;
 }
 
 .img-ig {
