@@ -461,7 +461,6 @@
     /* Hot News Home */
     
     .unknown {
-        
         margin: 0%;
         margin-top: 50px;
         margin-bottom: 50px;
@@ -652,6 +651,31 @@
     }
     /* listnews */
     
+    .div1-left {
+        background-color: white;
+        width: 93%;
+        height: max-content;
+        padding-left: 50px;
+        padding-right: 50px;
+        margin: 50px;
+        font-family: 'Montserrat';
+        border-radius: 15px;
+        box-shadow: 2px 5px 2px 5px grey;
+    }
+    
+    .div1-left h1 {
+        font-size: 3vw;
+        text-align: center;
+    }
+    
+    .div1-left p {
+        font-weight: normal;
+    }
+    
+    .div1-left img {
+        width: 300px;
+    }
+    
     .latest-post1-list {
         background-color: white;
         width: 100%;
@@ -674,6 +698,38 @@
         float: right;
         padding: 10px;
         border-radius: 10px;
+    }
+    /* comment */
+    
+    .divbutton {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    
+    .buttoncomment {
+        background-color: #D22C07;
+        font-size: 18px;
+        color: white;
+        width: 300px;
+        font-weight: bold;
+        margin-top: 10px;
+        padding: 10px;
+        border-radius: 20px;
+        justify-items: center;
+    }
+    
+    .nama {
+        font-size: 3vw;
+    }
+    
+    .nama img {
+        width: 50px;
+        border-radius: 50px;
+    }
+    
+    .comment {
+        margin-top: 20px;
+        font-size: 1.5vw;
     }
     /* tampilan Mobile */
     
@@ -890,5 +946,18 @@
         .share-twitter {
             width: 100px;
             height: 30px;
+        }
+        /* newspage */
+        .div1-left {
+            width: 85vw;
+        }
+        .div1-left img {
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+        .button_post1 {
+            font-size: 2vw;
+            width: 30vw;
         }
     }

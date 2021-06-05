@@ -20,26 +20,29 @@ include_once ("dbcontroller.php");
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="all.css">
-    <link rel="stylesheet" href="listnews.css">
+    <script src="http://code.jquery.com/jquery.js" type="text/javascript"></script>
     <title>GameInfo Official Website</title>
 </head>
 
 <body>
-    <div class="bodydiv">
+<div class="bodydiv">
         <!--Navigation Bar -->
         <header class="adminHeader">
             <nav>
                 <input type="checkbox" id="check">
                 <label for="check" class="checkbutton">
-                    <i class="fas fa-bars"></i>
+                    <i class="logo"><img src="img/navigation-hover.png" alt=""></i>
                 </label>
-                <img class="logo" src="img/logo_gameinfo-removebg-preview.png" alt="">
+                <div class="header">
+                    <h1 class="adminHeaderLogo">GameInfo</h1>
+                    <div class="clear"></div>
+                    <h4 class="adminHeaderLogo2">INFO MENARIK SEPUTAR GAME & TEKNOLOGI</h4>
+                </div>
 
                 <ul class="adminHeaderA">
                     <li><a class="a_header" href="index.php">Home</a></li>
                     <li><a class="a_header" href="category.php">Category</a></li>
                     <li><a class="a_header" href="list-news.php">News</a></li>
-                    <li><a class="a_header" href="admin.php">Admin</a></li>
                 </ul>
             </nav>
         </header>
@@ -61,13 +64,10 @@ include_once ("dbcontroller.php");
                         echo '<br>';
                         echo '<div class="isi-post">';
                         echo '<h1>'.$row["article_title"].'</h1>'; 
-                        echo '<br>';
-                        echo '<hr class="solid">';
-                        echo '<br>';
-                        echo '<p class="news-date">'.$row["article_date"].'   |   '.$row["article_admin"].'   |   '.$row["article_category"].'</p>';
+                        
                         echo '<br>';
                         echo '<br>';
-                        echo '<img src="'.$row["article_image"].'" width="150">';
+                        echo '<img src="'.$row["article_image"].'">';
                         echo '<br>';
                         echo '<br>';
                         for ($i = 0; $i < count($part); $i++){  
@@ -75,6 +75,10 @@ include_once ("dbcontroller.php");
                             echo '<br>';
                         }
                         echo '<br>';
+                        echo '<br>';
+                        echo '<hr class="solid">';
+                        echo '<br>';
+                        echo '<p class="news-date">'.$row["article_date"].'   |   '.$row["article_admin"].'   |   '.$row["article_category"].'</p>';
                         echo '<br>';
                         echo '';
                         echo '</div>';
@@ -124,7 +128,6 @@ include_once ("dbcontroller.php");
                 }
             ?>
     </div>
-    <div class="clear"></div>
 
     <div class="our-social-media">
         <h1>OUR SOCIAL MEDIA!</h1>
@@ -151,7 +154,7 @@ include_once ("dbcontroller.php");
 
 
     <section>
-        <div class="comment-areapanel">
+        <div class="comment-areapanel" >
             <h1>Comment</h1>
             <br>
             <form method="POST" action="addcomment.php">
@@ -164,22 +167,39 @@ include_once ("dbcontroller.php");
             </form>
         </div>
         <br>
+        <div class="divbutton">
+            <button id="buttonHideComment" class="buttoncomment">Hide This Comment</button>
+        </div>
+        
+        <div class="clear"></div>
         <br>
+        <div id="HideComment">
+
         <?php
             $sql = "SELECT * FROM comment WHERE article_id = '$articleID'";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0){
                 while ($row = $result->fetch_assoc()){?>
-        <div class="latest-post1">
-            name : <?php echo $row["name"]?> <br>
-            comment : <?php echo $row["comment"]?><br>
+        <div class="latest-post1" >
+            <div class="nama"> <img src="img\img-60ba4c21168b02.56602011.png" alt="">
+                <?php echo $row["name"]?> <br>
+            </div>
+            <div class="clear"></div>
+            <hr>
+            <div class="comment">
+                <?php echo $row["comment"]?><br>
+            </div>
+            
+            
         </div>
         <?php
                 }
             }
             $conn->close();
         ?>
+        </div>
+        
 
     </section>
 
@@ -201,5 +221,12 @@ include_once ("dbcontroller.php");
 
 
 </body>
+<script>
+    $("#buttonHideComment").click(
+        function(){
+            $("#HideComment").slideToggle("slow");
+        }
+    ); 
+</script>
 
 </html>

@@ -63,7 +63,7 @@
     <br>
 
     <h1>Edit Category</h1>
-    <table border="1" cellspacing="0" cellpadding="10">
+    <table >
         <tr>
             <td>No</td>
             <td>Nama Category</td>
@@ -107,7 +107,7 @@
     $sql = "SELECT article_id, article_text, article_date, article_admin, article_title, article_category, article_image FROM article";
     $result = $conn->query($sql);
     ?>
-    <table border="1" cellpadding="10" cellspacing="0">
+    <table>
         <tr>
             <td>No</td>
             <td>Title</td>
