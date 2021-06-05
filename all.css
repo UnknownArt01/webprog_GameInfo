@@ -1007,5 +1007,16 @@
         border-radius: 10px;
     }
 
+    #HidePost1 {
+        display: none;
+    }
+
+    #HidePost2 {
+        display: none;
+    }
+
+    #HidePost3 {
+        display: none;
+    }
 
     

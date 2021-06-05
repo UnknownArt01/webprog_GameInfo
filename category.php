@@ -126,6 +126,7 @@
 </body>
 
 <script>
+
     $("#categorylistHidePost1").click(
         function(){
             $("#HidePost1").slideToggle("slow");
