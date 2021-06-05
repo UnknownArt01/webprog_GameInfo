@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="all.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
 
     <title>GameInfo Official Website</title>
 </head>
@@ -25,7 +25,7 @@
             <nav>
                 <input type="checkbox" id="check">
                 <label for="check" class="checkbutton">
-                    <i class="fas fa-bars"></i>
+                    <i class="logo"><img src="img/navigation-hover.png" alt=""></i>
                 </label>
                 <div class="header">
                     <h1 class="adminHeaderLogo">GameInfo</h1>
@@ -37,65 +37,49 @@
                     <li><a class="a_header" href="index.php">Home</a></li>
                     <li><a class="a_header" href="category.php">Category</a></li>
                     <li><a class="a_header" href="list-news.php">News</a></li>
-                    <li><a class="a_header" href="admin.php">Admin</a></li>
                 </ul>
             </nav>
 
-            <!-- <div class="adminHeaderA">
-                <a class="a_header" href="index.php">Home</a>
-                <a class="a_header" href="category.php">Category</a>
-                <a class="a_header" href="news-page.php">News</a>
-                <a class="a_header-hot" href="">HOT NEWS!</a>
-                <a class="a_header" href="admin.php">Admin</a>
-            </div> -->
         </header>
     </div>
 
-    <!--Halaman Utama -->
+        <div class="unknown">
+            <div class="slider">
+                <div class="sliders">
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <input type="radio" name="radio-btn" id="radio4">
+                    <input type="radio" name="radio-btn" id="radio5">
 
-
-
-    <!-- <section class="container2"> -->
-        <div class="HotNews">
-            <div class="unknown">
-                <div class="slider">
-                    <div class="sliders">
-                        <input type="radio" name="radio-btn" id="radio1">
-                        <input type="radio" name="radio-btn" id="radio2">
-                        <input type="radio" name="radio-btn" id="radio3">
-                        <input type="radio" name="radio-btn" id="radio4">
-                        <input type="radio" name="radio-btn" id="radio5">
-
-                        <div class="slide first">
-                            <img src="img\pict1.jpg" alt="">
-                        </div>
-                        <div class="slide">
-                            <img src="img\pict2.jpg" alt="">
-                        </div>
-                        <div class="slide">
-                            <img src="img\pict3.jpg" alt="">
-                        </div>
-                        <div class="slide">
-                            <img src="img\re8vil.jpg" alt="">
-                        </div>
-                        <div class="slide">
-                            <img src="img\town.jpg" alt="">
-                        </div>
+                    <div class="slide first">
+                        <img src="img\pict1.jpg" alt="">
                     </div>
-                    <!--MANUAL NAV START-->
-                    <div class="navigation-manual">
-                        <label for="radio1" class="manual-btn"></label>
-                        <label for="radio2" class="manual-btn"></label>
-                        <label for="radio3" class="manual-btn"></label>
-                        <label for="radio4" class="manual-btn"></label>
-                        <label for="radio5" class="manual-btn"></label>
+                    <div class="slide">
+                        <img src="img\pict2.jpg" alt="">
                     </div>
-                </div>    
+                    <div class="slide">
+                        <img src="img\pict3.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="img\re8vil.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="img\town.jpg" alt="">
+                    </div>
+                </div>
+                <!--MANUAL NAV START-->
+                <div class="navigation-manual">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                    <label for="radio4" class="manual-btn"></label>
+                    <label for="radio5" class="manual-btn"></label>
+                </div>
             </div>    
-        
-        </div>
+        </div>    
     <!-- </section> -->
-        
+    <section>  
         <div class="clear"></div>
         <div class="latest-post">
             <h1>LATEST POST</h1>
@@ -157,7 +141,7 @@
             <h4>Copyright 2021 | GameInfo</h4>
         </footer>
     </section> -->
-    </div>
+
     <div class="clear"></div>
     <section>
         <footer>

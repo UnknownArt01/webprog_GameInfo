@@ -6,39 +6,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="all.css">
-    <link rel="stylesheet" href="listnews.css">
+
     <title>News List</title>
 </head>
 
 <body>
+    <!--Navigation Bar -->
     <div class="bodydiv">
         <!--Navigation Bar -->
         <header class="adminHeader">
             <nav>
                 <input type="checkbox" id="check">
                 <label for="check" class="checkbutton">
-                    <i class="fas fa-bars"></i>
+                    <i class="logo"><img src="img/navigation-hover.png" alt=""></i>
                 </label>
-                <img class="logo" src="img/logo_gameinfo-removebg-preview.png" alt="">
+                <div class="header">
+                    <h1 class="adminHeaderLogo">GameInfo</h1>
+                    <div class="clear"></div>
+                    <h4 class="adminHeaderLogo2">INFO MENARIK SEPUTAR GAME & TEKNOLOGI</h4>
+                </div>
 
                 <ul class="adminHeaderA">
                     <li><a class="a_header" href="index.php">Home</a></li>
                     <li><a class="a_header" href="category.php">Category</a></li>
                     <li><a class="a_header" href="list-news.php">News</a></li>
-                    <li><a class="a_header" href="admin.php">Admin</a></li>
                 </ul>
             </nav>
-        <!--Halaman Utama -->
-        <section class="container1">
-            <div class="div1-left">
-            </div>
-        </section>
-        <br><br>
-        <div class="latest-post-list">
-            <h1>News</h1>
+        </header>
+    </div>
+    <!--Halaman Utama -->
+    <section class="container1">
+        <div class="div1-left">
+        </div>
+    </section>
+    <br><br>
+    <div class="latest-post-list">
+        <h1>News</h1>
 
-
-            <?php
+        <?php
                 include_once 'dbcontroller.php';
                 // $articleID = $_GET['id'];
                 $conn = connect_database();
@@ -47,27 +52,27 @@
 
                 if ($result->num_rows > 0) {
                     while ($row = $result ->fetch_assoc()){?>
-            <div class="latest-post1-list">
-                <div class="postImage">
-                    <img src="<?php echo $row["article_image"]?>">
-                </div>
-                <div class="ArticleHome">
-                    <h2><?php echo $row["article_title"]?></h2>
-                    <p class="news-date"><?php echo $row["article_date"]?> | <?php echo $row["article_admin"]?> |
-                        <?php echo $row["article_category"]?></p>
-                    <a href="/UAS/webprog_GameInfo/news-page.php?id=<?php echo $row["article_id"]?>"><input
-                            type="button" value="SELENGKAPNYA" class="button_post1"></a>
-                </div>
+        <div class="latest-post1-list">
+            <div class="postImage">
+                <img src="<?php echo $row["article_image"]?>">
             </div>
-            <?php
+            <div class="ArticleHome">
+                <h2><?php echo $row["article_title"]?></h2>
+                <p class="news-date"><?php echo $row["article_date"]?> | <?php echo $row["article_admin"]?> |
+                    <?php echo $row["article_category"]?></p>
+                <a href="/UAS/webprog_GameInfo/news-page.php?id=<?php echo $row["article_id"]?>"><input type="button"
+                        value="SELENGKAPNYA" class="button_post1"></a>
+            </div>
+        </div>
+        <?php
                     }
                 }
 
             ?>
-        </div>
-
-
     </div>
+
+
+
     <div class="clear"></div>
 
     <section>

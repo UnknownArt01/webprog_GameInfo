@@ -7,8 +7,9 @@
     <title>Slide Show</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="slider">
+<body >
+    <div class="unknown">
+        <div class="slider">
         <div class="sliders">
             <input type="radio" name="radio-btn" id="radio1">
             <input type="radio" name="radio-btn" id="radio2">
@@ -17,29 +18,20 @@
             <input type="radio" name="radio-btn" id="radio5">
 
             <div class="slide first">
-                <img src="img\town.jpg" alt="">
+                <img src="pict1.jpg" alt="">
             </div>
             <div class="slide">
-                <img src="img\village.jpg" alt="">
+                <img src="pict2.jpg" alt="">
             </div>
             <div class="slide">
-                <img src="img\town.jpg" alt="">
+                <img src="pict3.jpg" alt="">
             </div>
             <div class="slide">
-                <img src="img\village.jpg" alt="">
+                <img src="pict1.jpg" alt="">
             </div>
             <div class="slide">
-                <img src="img\town.jpg" alt="">
+                <img src="pict2.jpg" alt="">
             </div>
-            <!--automatic navigation start-->
-            <div class="navigation-auto">
-                <div class="auto-btn1"></div>
-                <div class="auto-btn2"></div>
-                <div class="auto-btn3"></div>
-                <div class="auto-btn4"></div>
-                <div class="auto-btn5"></div>
-            </div>
-            <!--automatic navigation end-->
         </div>
         <!--MANUAL NAV START-->
         <div class="navigation-manual">
@@ -51,5 +43,8 @@
         </div>
         <!--MANUAL NAV END-->
     </div>
+    </div>
+    
+    
 </body>
 </html>
