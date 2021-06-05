@@ -20,13 +20,13 @@ include_once ("dbcontroller.php");
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="all.css">
-    
+
     <script src="http://code.jquery.com/jquery.js" type="text/javascript"></script>
     <title>GameInfo Official Website</title>
 </head>
 
 <body>
-<div class="bodydiv">
+    <div class="bodydiv">
         <!--Navigation Bar -->
         <header class="adminHeader">
             <nav>
@@ -50,7 +50,7 @@ include_once ("dbcontroller.php");
     </div>
     <div class="clear"></div>
     <!--Halaman Utama -->
-    <section class="container1">
+    <div class="container1">
         <div class="div1-left">
             <?php
                 $conn = connect_database();
@@ -60,43 +60,46 @@ include_once ("dbcontroller.php");
 
                 if ($result->num_rows > 0) {
                     while ($row = $result ->fetch_assoc()){
-                        $part = explode('.', $row["article_text"]);
+                        $part = explode('.', $row["article_text"]);?>
+            <br>
+            <h1>
+                <?php echo $row["article_title"]?>
+            </h1>
+            <br>
+            <br>
+            <img src="<?php echo $row["article_image"]?>">
+            <br>
+            <br>
+            <div class="article-textarea">
+                <?php
+                    for ($i = 0; $i < count($part); $i++){  
+                    print '<p class="news_post">'.$part[$i].'.</p>';
                         echo '<br>';
-                        echo '<br>';
-                        echo '<div class="isi-post">';
-                        echo '<h1>'.$row["article_title"].'</h1>'; 
-                        
-                        echo '<br>';
-                        echo '<br>';
-                        echo '<img src="'.$row["article_image"].'">';
-                        echo '<br>';
-                        echo '<br>';
-                        for ($i = 0; $i < count($part); $i++){  
-                            print '<p class="news_post">'.$part[$i].'.</p>';
-                            echo '<br>';
-                        }
-                        echo '<br>';
-                        echo '<br>';
-                        echo '<hr class="solid">';
-                        echo '<br>';
-                        echo '<p class="news-date">'.$row["article_date"].'   |   '.$row["article_admin"].'   |   '.$row["article_category"].'</p>';
-                        echo '<br>';
-                        echo '';
-                        echo '</div>';
-                        
+                    }
+                ?>
+            </div>
+            <hr class="solid">
+            <br>
+            <br>
+            <p class="news-date"><?php echo $row["article_date"]?> | <?php echo $row["article_admin"]?> |
+                <?php echo $row["article_category"]?></p>
+            <br>
+            <br>
+            <?php
                     }
                 }
-
             ?>
         </div>
-    </section>
+    </div>
 
     <div class="shareWhatsapp">
-        
-        <a href="https://www.facebook.com/"> <input type="button" value="Share to Facebook" class="share-fb"> </a> 
+
+        <a href="https://www.facebook.com/"> <input type="button" value="Share to Facebook" class="share-fb"> </a>
         <input type="button" value="Share to WhatsApp" class="share-wa">
-        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false"><input type="button" value="">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button"
+            data-show-count="false"><input type="button" value="">Tweet</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
     </div>
 
     <div class="clear"></div>
@@ -155,7 +158,7 @@ include_once ("dbcontroller.php");
 
 
     <section>
-        <div class="comment-areapanel" >
+        <div class="comment-areapanel">
             <h1>Comment</h1>
             <br>
             <form method="POST" action="addcomment.php">
@@ -164,43 +167,43 @@ include_once ("dbcontroller.php");
                 <label for="comment">Comment :</label><br>
                 <textarea name="comment" class="comment-text" cols="30" rows="10"></textarea><br><br>
                 <input type="hidden" name="article_id" value="<?php echo $articleID ?>">
-                <input type="submit" name="submit" class="submit-comment">
+                <input type="submit" name="submit" class="submit-comment" value="Comment">
             </form>
         </div>
         <br>
         <div class="divbutton">
             <button id="buttonHideComment" class="buttoncomment">Hide This Comment</button>
         </div>
-        
+
         <div class="clear"></div>
         <br>
         <div id="HideComment">
 
-        <?php
+            <?php
             $sql = "SELECT * FROM comment WHERE article_id = '$articleID'";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0){
                 while ($row = $result->fetch_assoc()){?>
-        <div class="latest-post1" >
-            <div class="nama"> <img src="img\img-60ba4c21168b02.56602011.png" alt="">
-                <?php echo $row["name"]?> <br>
+            <div class="latest-post1">
+                <div class="nama"> <img src="img\img-60ba4c21168b02.56602011.png" alt="">
+                    <?php echo $row["name"]?> <br>
+                </div>
+                <div class="clear"></div>
+                <hr>
+                <div class="comment">
+                    <?php echo $row["comment"]?><br>
+                </div>
+
+
             </div>
-            <div class="clear"></div>
-            <hr>
-            <div class="comment">
-                <?php echo $row["comment"]?><br>
-            </div>
-            
-            
-        </div>
-        <?php
+            <?php
                 }
             }
             $conn->close();
         ?>
         </div>
-        
+
 
     </section>
 
@@ -223,11 +226,11 @@ include_once ("dbcontroller.php");
 
 </body>
 <script>
-    $("#buttonHideComment").click(
-        function(){
-            $("#HideComment").slideToggle("slow");
-        }
-    ); 
+$("#buttonHideComment").click(
+    function() {
+        $("#HideComment").slideToggle("slow");
+    }
+);
 </script>
 
 </html>

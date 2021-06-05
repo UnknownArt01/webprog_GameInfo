@@ -21,6 +21,11 @@
         position: relative;
         max-width: 100%;
     }
+
+    .container1 {
+        max-width: 95%;
+        margin: auto;
+    }
     
     .header_h1_login {
         font-family: 'Kalam';
@@ -449,6 +454,11 @@
         height: 300px;
         width: 300px;
     }
+
+    .article-textarea{
+        word-wrap: break-word;
+        width: 100%;
+    }
     
     .ArticleHome {
         margin: 20px;
@@ -654,11 +664,13 @@
     
     .div1-left {
         background-color: white;
-        width: 93%;
+        width: 100%;
         height: max-content;
         padding-left: 50px;
         padding-right: 50px;
-        margin: 50px;
+        margin: auto;
+        margin-bottom: 50px;
+        margin-top: 50px;
         font-family: 'Montserrat';
         border-radius: 15px;
         box-shadow: 2px 5px 2px 5px grey;
@@ -1007,16 +1019,5 @@
         border-radius: 10px;
     }
 
-    #HidePost1 {
-        display: none;
-    }
-
-    #HidePost2 {
-        display: none;
-    }
-
-    #HidePost3 {
-        display: none;
-    }
 
     
