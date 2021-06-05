@@ -23,6 +23,7 @@ include_once ("dbcontroller.php");
     <link rel="stylesheet" href="listnews.css">
     <title>GameInfo Official Website</title>
 </head>
+
 <body>
     <div class="bodydiv">
         <!--Navigation Bar -->
@@ -41,12 +42,12 @@ include_once ("dbcontroller.php");
                     <li><a class="a_header" href="admin.php">Admin</a></li>
                 </ul>
             </nav>
-        <!--Halaman Utama -->
-        <section class="container1">
-            <div class="div1-left">
-            </div>
-        </section>
-
+        </header>
+    </div>
+    <div class="clear"></div>
+    <!--Halaman Utama -->
+    <section class="container1">
+        <div class="div1-left">
             <?php
                 $conn = connect_database();
                 $articleID = $_GET['id'];
@@ -81,59 +82,10 @@ include_once ("dbcontroller.php");
                     }
                 }
 
-            ?>           
+            ?>
+        </div>
+    </section>
 
-            <div class="clear"></div>
-
-            <div class="latest-post">
-                <h1>LATEST POST</h1>
-                <br>
-                <div class="latest-post1">
-                    <div class="postImage"><img class="postImageimg" src="img\img-60b9bd70496999.83305970.png" alt=""></div>
-                    <div class="ArticleHome">
-                        <h3>Selyandaru Akhirnya Tidak Jomblo</h2>
-                        <p>lorem</p>
-                    </div>
-                </div>
-                <div class="latest-post2">
-                    <div class="postImage"><img class="postImageimg" src="img\img-60b9be4fdf6f33.49396398.png" alt=""></div>
-                    <div class="ArticleHome">
-                        <h3>Rafi Masuk Nominal Tertampan IMT?</h2>
-                        <p>lorem</p>
-                    </div>
-                </div>
-                <div class="latest-post3">
-                    <div class="postImage"></div>
-                    <div class="ArticleHome">
-                        <h3>Seorang Programmer Terkena Tipes</h2>
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="our-social-media">
-                <h1>OUR SOCIAL MEDIA!</h1>
-                <div class="socmed-facebook">
-                    <div class="img-fb"><img src="img/facebook.png"></div>
-                    <h2 class="socmed">GameInfo</h2>
-                </div>
-                <div class="socmed-youtube">
-                    <div class="img-yt"><img src="img/youtube.png"></div>
-                    <h2 class="socmed">GameInfo Official</h2>
-                </div>
-                <div class="socmed-instagram">
-                    <div class="img-ig"><img src="img/instagram.png"></div>
-                    <h2 class="socmed">officialgameinfo</h2>
-                </div>
-            </div>
-        </section>
-  
-    </div>
-
-                
-
-    <div class="clear"></div>
-
-    
     <div class="shareWhatsapp">
         
         <a href="https://www.facebook.com/"> <input type="button" value="Share to Facebook" class="share-fb"> </a> 
@@ -142,15 +94,71 @@ include_once ("dbcontroller.php");
         
     </div>
 
+    <div class="clear"></div>
+    <div class="latest-post">
+        <h1>LATEST POST</h1>
+
+        <?php
+                include_once 'dbcontroller.php';
+                // $articleID = $_GET['id'];
+                $conn = connect_database();
+                $sql = "SELECT * FROM article ORDER BY article_date DESC LIMIT 3";
+                $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+                    while ($row = $result ->fetch_assoc()){?>
+        <div class="latest-post1">
+            <div class="postImage">
+                <img src="<?php echo $row["article_image"]?>">
+            </div>
+            <div class="ArticleHome">
+                <h2><?php echo $row["article_title"]?></h2>
+                <p class="news-date"><?php echo $row["article_date"]?> | <?php echo $row["article_admin"]?> |
+                    <?php echo $row["article_category"]?></p>
+                <a href="/UAS/webprog_GameInfo/news-page.php?id=<?php echo $row["article_id"]?>"><input type="button"
+                        value="SELENGKAPNYA" class="button_post1"></a>
+            </div>
+        </div>
+        <?php
+                    }
+                }
+            ?>
+    </div>
+    <div class="clear"></div>
+
+    <div class="our-social-media">
+        <h1>OUR SOCIAL MEDIA!</h1>
+        <div class="socmed-facebook">
+            <div class="img-fb"><img src="img/facebook.png"></div>
+            <h2 class="socmed">GameInfo</h2>
+        </div>
+        <div class="socmed-youtube">
+            <div class="img-yt"><img src="img/youtube.png"></div>
+            <h2 class="socmed">GameInfo Official</h2>
+        </div>
+        <div class="socmed-instagram">
+            <div class="img-ig"><img src="img/instagram.png"></div>
+            <h2 class="socmed">officialgameinfo</h2>
+        </div>
+    </div>
+    </section>
+
+    </div>
+
+
+
+    <div class="clear"></div>
+
+
     <section>
         <div class="comment-areapanel">
             <h1>Comment</h1>
             <br>
             <form method="POST" action="addcomment.php">
-                <label for="name" >Name : </label>
+                <label for="name">Name : </label>
                 <input type="text" name="name" class="comment-name"><br><br>
                 <label for="comment">Comment :</label><br>
-                <textarea name="comment" class="comment-text" cols="30" rows="10" ></textarea><br><br>
+                <textarea name="comment" class="comment-text" cols="30" rows="10"></textarea><br><br>
                 <input type="hidden" name="article_id" value="<?php echo $articleID ?>">
                 <input type="submit" name="submit" class="submit-comment">
             </form>
@@ -163,16 +171,16 @@ include_once ("dbcontroller.php");
 
             if ($result->num_rows > 0){
                 while ($row = $result->fetch_assoc()){?>
-                    <div class="latest-post1">
-                    name : <?php echo $row["name"]?> <br>
-                    comment : <?php echo $row["comment"]?><br>
-                    </div>
-                <?php
+        <div class="latest-post1">
+            name : <?php echo $row["name"]?> <br>
+            comment : <?php echo $row["comment"]?><br>
+        </div>
+        <?php
                 }
             }
             $conn->close();
         ?>
-    
+
     </section>
 
 
@@ -189,29 +197,9 @@ include_once ("dbcontroller.php");
             <h4>Copyright 2021 | GameInfo</h4>
         </footer>
     </section>
-    
-    
+
+
 
 </body>
+
 </html>
-
-
-<!-- Comment
-<?php
-            $sql = "SELECT id, name, comment FROM comment_section";
-            $result = $conn->query($sql);
-
-            if ($result->num_rows > 0){
-                while ($row = $result->fetch_assoc()){
-                    echo '<div class="latest-post1">';
-                    echo 'id : ' . $row["id"] . '<br>';
-                    echo 'name : ' . $row["name"] . '<br>';
-                    echo 'comment : ' . $row["comment"] . '<br>';
-                    echo '</div>';
-                }
-            }else{
-                echo "0 results";
-            }
-
-            $conn->close();
-        ?> -->

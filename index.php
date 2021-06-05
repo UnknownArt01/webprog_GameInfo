@@ -43,74 +43,72 @@
         </header>
     </div>
 
-        <div class="unknown">
-            <div class="slider">
-                <div class="sliders">
-                    <input type="radio" name="radio-btn" id="radio1">
-                    <input type="radio" name="radio-btn" id="radio2">
-                    <input type="radio" name="radio-btn" id="radio3">
-                    <input type="radio" name="radio-btn" id="radio4">
-                    <input type="radio" name="radio-btn" id="radio5">
+    <div class="unknown">
+        <div class="slider">
+            <div class="sliders">
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+                <input type="radio" name="radio-btn" id="radio5">
 
-                    <div class="slide first">
-                        <img src="img\pict1.jpg" alt="">
-                    </div>
-                    <div class="slide">
-                        <img src="img\pict2.jpg" alt="">
-                    </div>
-                    <div class="slide">
-                        <img src="img\pict3.jpg" alt="">
-                    </div>
-                    <div class="slide">
-                        <img src="img\re8vil.png" alt="">
-                    </div>
-                    <div class="slide">
-                        <img src="img\town.jpg" alt="">
-                    </div>
+                <div class="slide first">
+                    <img src="img\pict1.jpg" alt="">
                 </div>
-                <!--MANUAL NAV START-->
-                <div class="navigation-manual">
-                    <label for="radio1" class="manual-btn"></label>
-                    <label for="radio2" class="manual-btn"></label>
-                    <label for="radio3" class="manual-btn"></label>
-                    <label for="radio4" class="manual-btn"></label>
-                    <label for="radio5" class="manual-btn"></label>
+                <div class="slide">
+                    <img src="img\pict2.jpg" alt="">
                 </div>
-            </div>    
-        </div>    
+                <div class="slide">
+                    <img src="img\pict3.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="img\re8vil.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="img\town.jpg" alt="">
+                </div>
+            </div>
+            <!--MANUAL NAV START-->
+            <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+                <label for="radio5" class="manual-btn"></label>
+            </div>
+        </div>
+    </div>
     <!-- </section> -->
-    <section>  
+    <section>
         <div class="clear"></div>
         <div class="latest-post">
             <h1>LATEST POST</h1>
-            <br>
+
+            <?php
+                include_once 'dbcontroller.php';
+                // $articleID = $_GET['id'];
+                $conn = connect_database();
+                $sql = "SELECT * FROM article ORDER BY article_date DESC LIMIT 3";
+                $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+                    while ($row = $result ->fetch_assoc()){?>
             <div class="latest-post1">
-                <div class="postImage"></div>
-                <div class="ArticleHome">
-                    <h2>Selyandaru Akhirnya Tidak Jomblo</h2>
-                    <p>lorem</p>
+                <div class="postImage">
+                    <img src="<?php echo $row["article_image"]?>">
                 </div>
-
-            </div>
-
-            <div class="latest-post2">
-                <div class="postImage"></div>
                 <div class="ArticleHome">
-                    <h2>Rafi Masuk Nominal Tertampan IMT?</h2>
-                    <p>lorem</p>
+                    <h2><?php echo $row["article_title"]?></h2>
+                    <p class="news-date"><?php echo $row["article_date"]?> | <?php echo $row["article_admin"]?> |
+                        <?php echo $row["article_category"]?></p>
+                    <a href="/UAS/webprog_GameInfo/news-page.php?id=<?php echo $row["article_id"]?>"><input
+                            type="button" value="SELENGKAPNYA" class="button_post1"></a>
                 </div>
-
             </div>
-
-            <div class="latest-post3">
-                <div class="postImage"></div>
-                <div class="ArticleHome">
-                    <h2>Seorang Programmer Terkena Tipes</h2>
-                    <p>lorem</p>
-                </div>
-
-            </div>
-
+            <?php
+                    }
+                }
+            ?>
         </div>
 
         <div class="our-social-media">
