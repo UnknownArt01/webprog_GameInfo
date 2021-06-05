@@ -49,7 +49,7 @@
                     while ($row = $result ->fetch_assoc()){?>
             <div class="latest-post1-list">
                 <div class="postImage">
-                    <img src="<?php echo $row["article_image"]?>" width="140" height="min-height">
+                    <img src="<?php echo $row["article_image"]?>">
                 </div>
                 <div class="ArticleHome">
                     <h2><?php echo $row["article_title"]?></h2>

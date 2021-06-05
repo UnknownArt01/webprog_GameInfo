@@ -1,12 +1,9 @@
-<?php
-    include_once 'controller.php';
-    // $post_id = $_POST['post_id'];
-    ini_set('date.timezone','Asia/Jakarta');
-    $article_date = date("Y-m-d H:i:s");;
-    $article_title = $_POST['article_title']; 
-    $article_admin = $_POST['article_admin'];
-    $article_text = $_POST['article_text'];
-    $article_category = $_POST['selectCategory'];
+<?php 
+    include 'controller.php';
+    $articleID = $_POST["article_id"];
+    $newtitle = $_POST["article_title"];
+    $newadmin = $_POST["article_admin"];
+    $newtext = $_POST["article_text"];
 
     $imageName = $_FILES['article_image']['name'];
     $imageSize = $_FILES['article_image']['size'];
@@ -31,7 +28,7 @@
                 $filename = uniqid("img-", true).'.'.$img_ex_lc;
                 $target = 'img/'.$filename;
                 move_uploaded_file($tmp_name, $target);
-                addarticle($article_text, $article_date, $article_admin, $article_title, $article_category, $target);
+                editarticle($newtitle, $newadmin, $target, $newtext, $articleID);
                 header("location: panel.php");
             } else {
                 $message = "You are not allowed to upload this file type!";
@@ -50,7 +47,5 @@
         </script>";
         exit;
     }
-
-    header("location: panel.php");
-
+    
 ?>
