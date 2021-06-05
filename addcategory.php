@@ -1,10 +1,7 @@
 <?php
-    include_once 'dbcontroller.php';
+    include_once 'controller.php';
 
-    $conn = connect_database();
     $category = $_POST['inputCategory'];
-    
-    $sql = "INSERT INTO category (category_name) values ('$category')";
-    $result = mysqli_query($conn, $sql) or die (mysqli_error($conn));
+    addcategory($category);
     header("location: panel.php");
 ?>

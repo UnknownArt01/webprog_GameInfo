@@ -26,15 +26,26 @@
         <?php
             include_once 'dbcontroller.php';
             $conn = connect_database();
-            $sql = "SELECT id, name, comment FROM comment_section";
+            $sql = "SELECT id, article_id, name, comment FROM comment";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0){
                 while ($row = $result->fetch_assoc()){
                     echo '<div class="latest-post1">';
+                    $artID = $row["article_id"];
+                    $sql2 = "SELECT * FROM article WHERE article_id = '$artID'";
+                    $result2 = $conn->query($sql2);
+                    if ($result2->num_rows > 0){
+                        while ($row2 = $result2->fetch_assoc()){
+                            echo 'article_id + name : ' . $row2["article_id"] . ' . ' . $row2["article_title"] . '<br>';
+                        }
+                    }
                     echo 'id : ' . $row["id"] . '<br>';
                     echo 'name : ' . $row["name"] . '<br>';
-                    echo 'comment : ' . $row["comment"] . '<br>';
+                    echo 'comment : ' . $row["comment"] . '<br>';?>
+                    <a href="deletecomment.php?id=<?php echo $row["id"]?>"><input type="submit" value="Delete"></a>
+                    <a href="editcompanel.php?id=<?php echo $row["id"]?>"><input type="submit" value="Edit"></a>
+                    <?php
                     echo '</div>';
                 }
             }else{
@@ -43,8 +54,6 @@
 
             $conn->close();
         ?>
-    
-
 </body>
 
 </html>

@@ -2,6 +2,12 @@
     session_start();
     if (!isset($_SESSION['username'])){
         header("Location: login.php");
+    } else if (isset($_SESSION['username'])){
+        if (time() - $_SESSION["logintime"] > 600){
+            session_unset();
+            session_destroy();
+            header("location: login.php");
+        }
     }
 ?>
 <!DOCTYPE html>

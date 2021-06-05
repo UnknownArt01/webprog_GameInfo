@@ -1,11 +1,7 @@
 <?php
-    include_once 'dbcontroller.php';
+    include_once 'controller.php';
 
-    $conn = connect_database();
     $deletecategoryId = $_POST['selectCategory'];
-    echo $_POST['selectCategory'];
-
-    $sql = "DELETE FROM category where category_id = $deletecategoryId";
-    connect_database() -> query($sql);
+    deletecategory($deletecategoryId);
     header("location: panel.php");
 ?>

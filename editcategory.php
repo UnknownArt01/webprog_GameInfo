@@ -1,16 +1,9 @@
 <?php
-    include 'dbcontroller.php';
+    include 'controller.php';
     $edit = $_POST["catID"];
-    $nama = $_POST["catEditName"];
+    $editnama = $_POST["catEditName"];
+    $nama = $_POST["catName"];
 
-    $conn = connect_database();
-    $sql = "UPDATE category SET category_name = '$nama' WHERE category_id = '$edit'";
-    if($conn -> query($sql) == TRUE){
-        echo "Success";
-    } else {
-        echo "Failed" . $conn -> error;
-    } 
-
-    $conn->close();
+    editcategory($edit, $editnama, $nama);
     header("location: panel.php");
 ?>
