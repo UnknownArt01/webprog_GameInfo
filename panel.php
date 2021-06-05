@@ -36,10 +36,6 @@
         </div>
     </div>
     
-        
-    
-    
-
     <br>
 
     <div class="panel-width">
@@ -156,7 +152,7 @@
 
             </table>
         </div>
-        
+
     <br>
     <br>
     <br>

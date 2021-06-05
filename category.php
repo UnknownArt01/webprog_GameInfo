@@ -89,5 +89,20 @@
         }   
     ?>
 
+    <div class="clear"></div>
+        <section>
+            <footer>
+                <div class="Footer">
+                    <h1 class="adminFooterLogo">GameInfo</h1>
+                    <div class="clear"></div>
+                    <h4 class="adminFooterLogo2">INFO MENARIK SEPUTAR GAME & TEKNOLOGI</h4>
+                </div>
+                <div class="clear"></div>
+                <br>
+                <hr>
+                <h4>Copyright 2021 | GameInfo</h4>
+            </footer>
+        </section>
+
 </body>
 </html>
