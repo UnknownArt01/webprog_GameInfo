@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="all.css">
+    <script src="http://code.jquery.com/jquery.js" type="text/javascript"></script>
     <title>Category - GameInfo</title>
 </head>
 <body>
@@ -48,60 +49,74 @@
     
         <div class="category1">
             <h1>First Person Shooter (FPS)</h1>
+            <input id="categorylistHidePost1" class="categorylist-button" type="button" value="LIHAT">
         </div>
 
-        <div class="latest-post1">
-            <!-- <div class="postImage">
-                <img src="<?php echo $row["article_image"]?>">
+        <div id="HidePost1">
+            <div class="latest-post1">
+                <!-- <div class="postImage">
+                    <img src="<?php echo $row["article_image"]?>">
+                </div>
+                <div class="ArticleHome">
+                    <h2><?php echo $row["article_title"]?></h2>
+                    <p class="news-date"><?php echo $row["article_date"]?> | <?php echo $row["article_admin"]?> |
+                        <?php echo $row["article_category"]?></p>
+                    <a href="/UAS/webprog_GameInfo/news-page.php?id=<?php echo $row["article_id"]?>"><input
+                            type="button" value="SELENGKAPNYA" class="button_post1"></a>
+                </div> -->
             </div>
-            <div class="ArticleHome">
-                <h2><?php echo $row["article_title"]?></h2>
-                <p class="news-date"><?php echo $row["article_date"]?> | <?php echo $row["article_admin"]?> |
-                    <?php echo $row["article_category"]?></p>
-                <a href="/UAS/webprog_GameInfo/news-page.php?id=<?php echo $row["article_id"]?>"><input
-                        type="button" value="SELENGKAPNYA" class="button_post1"></a>
-            </div> -->
         </div>
-    </div>
 
+        
+    </div>
+    
     <div class="category2-listnews">
         <div class="category1">
             <h1>Multiplayer Online Battle Arena (MOBA)</h1>
+            <input id="categorylistHidePost2" class="categorylist-button" type="button" value="LIHAT">
+            
         </div>
-
-        <div class="latest-post1">
-            <!-- <div class="postImage">
-                <img src="<?php echo $row["article_image"]?>">
+        <div id="HidePost2">
+            <div class="latest-post1">
+                <!-- <div class="postImage">
+                    <img src="<?php echo $row["article_image"]?>">
+                </div>
+                <div class="ArticleHome">
+                    <h2><?php echo $row["article_title"]?></h2>
+                    <p class="news-date"><?php echo $row["article_date"]?> | <?php echo $row["article_admin"]?> |
+                        <?php echo $row["article_category"]?></p>
+                    <a href="/UAS/webprog_GameInfo/news-page.php?id=<?php echo $row["article_id"]?>"><input
+                            type="button" value="SELENGKAPNYA" class="button_post1"></a>
+                </div> -->
             </div>
-            <div class="ArticleHome">
-                <h2><?php echo $row["article_title"]?></h2>
-                <p class="news-date"><?php echo $row["article_date"]?> | <?php echo $row["article_admin"]?> |
-                    <?php echo $row["article_category"]?></p>
-                <a href="/UAS/webprog_GameInfo/news-page.php?id=<?php echo $row["article_id"]?>"><input
-                         type="button" value="SELENGKAPNYA" class="button_post1"></a>
-            </div> -->
         </div>
+        
     </div>
 
-    <hr>
+
 
     <div class="category3-listnews">
     <div class="category1">
             <h1>Massively Multiplayer Online Role Playing Game (MMORPG)</h1>
+            <input id="categorylistHidePost3" class="categorylist-button" type="button" value="LIHAT">
         </div>
 
-        <div class="latest-post1">
-            <!-- <div class="postImage">
-                <img src="<?php echo $row["article_image"]?>">
+        <div id="HidePost3">
+            <div class="latest-post1">
+                <!-- <div class="postImage">
+                    <img src="<?php echo $row["article_image"]?>">
+                </div>
+                <div class="ArticleHome">
+                    <h2><?php echo $row["article_title"]?></h2>
+                    <p class="news-date"><?php echo $row["article_date"]?> | <?php echo $row["article_admin"]?> |
+                        <?php echo $row["article_category"]?></p>
+                    <a href="/UAS/webprog_GameInfo/news-page.php?id=<?php echo $row["article_id"]?>"><input
+                            type="button" value="SELENGKAPNYA" class="button_post1"></a>
+                </div> -->
             </div>
-            <div class="ArticleHome">
-                <h2><?php echo $row["article_title"]?></h2>
-                <p class="news-date"><?php echo $row["article_date"]?> | <?php echo $row["article_admin"]?> |
-                    <?php echo $row["article_category"]?></p>
-                <a href="/UAS/webprog_GameInfo/news-page.php?id=<?php echo $row["article_id"]?>"><input
-                         type="button" value="SELENGKAPNYA" class="button_post1"></a>
-            </div> -->
+
         </div>
+        
     </div>
 
 
@@ -109,4 +124,33 @@
 
 
 </body>
+
+<script>
+    $("#categorylistHidePost1").click(
+        function(){
+            $("#HidePost1").slideToggle("slow");
+            
+        }
+        
+    ); 
+
+    $("#categorylistHidePost2").click(
+        function(){
+            $("#HidePost2").slideToggle("slow");
+            
+        }
+        
+    ); 
+
+    $("#categorylistHidePost3").click(
+        function(){
+            $("#HidePost3").slideToggle("slow");
+            
+        }
+        
+    ); 
+
+   
+
+</script>
 </html>

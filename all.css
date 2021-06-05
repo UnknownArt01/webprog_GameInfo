@@ -968,9 +968,10 @@
     /*CATEGORY*/
 
     .category1{
-        text-align: center;
+        text-align: left;
         font-family: 'Montserrat';
-        background-color: white;
+        background-color: #170059;
+        color: white;
         height: 80px;
         padding: 20px;
         margin: 40px;
@@ -978,12 +979,33 @@
         box-shadow: 3px 3px 3px 3px grey;
     }
 
+    .category1 h1 {
+        float: left;
+        width: 70%;
+        font-size: 30px;
+    }
     .category-h1 h1{
+        
         font-size: 4vw;
         text-align: center;
         margin-top: 30px;
         font-family: 'Montserrat';
         font-weight: 900;
     }
+
+    .categorylist-button {
+        align-items: right;
+        background-color: #D22C07;
+        /* position: absolute; */
+        font-size: 18px;
+        color: white;
+        float: right;
+        width: 10%;
+        font-weight: bold;
+       
+        padding: 10px;
+        border-radius: 10px;
+    }
+
 
     
