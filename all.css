@@ -276,9 +276,10 @@
     }
     
     .latest-post-list h1 {
-        font-size: 5vw;
+        font-size: 4vw;
         text-align: center;
         font-family: "Montserrat";
+        font-weight: 900;
     }
     
     .latest-post h1 {
@@ -960,4 +961,29 @@
             font-size: 2vw;
             width: 30vw;
         }
+        
+        
     }
+
+    /*CATEGORY*/
+
+    .category1{
+        text-align: center;
+        font-family: 'Montserrat';
+        background-color: white;
+        height: 80px;
+        padding: 20px;
+        margin: 40px;
+        border-radius: 20px;
+        box-shadow: 3px 3px 3px 3px grey;
+    }
+
+    .category-h1 h1{
+        font-size: 4vw;
+        text-align: center;
+        margin-top: 30px;
+        font-family: 'Montserrat';
+        font-weight: 900;
+    }
+
+    

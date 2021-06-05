@@ -11,11 +11,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=Montserrat:wght@500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="all.css">
     <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
 
-    <title>GameInfo Official Website</title>
+    <title>GameInfo - Website Seputar Game & Teknologi</title>
 </head>
 
 <body>

@@ -20,6 +20,7 @@ include_once ("dbcontroller.php");
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="all.css">
+    
     <script src="http://code.jquery.com/jquery.js" type="text/javascript"></script>
     <title>GameInfo Official Website</title>
 </head>

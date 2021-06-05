@@ -5,9 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=Montserrat:wght@500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="all.css">
 
-    <title>News List</title>
+    <title>News List - GameInfo Official Website</title>
 </head>
 
 <body>
@@ -35,13 +43,13 @@
         </header>
     </div>
     <!--Halaman Utama -->
-    <section class="container1">
+    <!-- <section class="container1">
         <div class="div1-left">
         </div>
-    </section>
+    </section> -->
     <br><br>
     <div class="latest-post-list">
-        <h1>News</h1>
+        <h1>NEWS</h1>
 
         <?php
                 include_once 'dbcontroller.php';
