@@ -25,7 +25,7 @@
             <nav>
                 <input type="checkbox" id="check">
                 <label for="check" class="checkbutton">
-                    <i class="logo"><img src="img/navigation-hover.png" alt=""></i>
+                    <i class="logo"><img src="img\navigation-hover.png" alt=""></i>
                 </label>
                 <div class="header">
                     <h1 class="adminHeaderLogo">GameInfo</h1>
