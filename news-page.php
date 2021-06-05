@@ -27,27 +27,21 @@ include_once ("dbcontroller.php");
     <div class="bodydiv">
         <!--Navigation Bar -->
         <header class="adminHeader">
-            <div class="header">
-                <h1 class="adminHeaderLogo">GameInfo</h1>
-                <div class="clear"></div>
-                <h4 class="adminHeaderLogo2">INFO MENARIK SEPUTAR GAME & TEKNOLOGI</h4>
-            </div>
-            <div class="a_header">
-                <div class="adminHeaderA">
-                    <a class="a_header" href="index.php">Home</a>
-                    <a class="a_header" href="category.php">Category</a>
-                    <a class="a_header" href="news-page.php">News</a>
-                    <a class="a_header-hot" href="">HOT NEWS!</a>
-                    <a class="a_header" href="admin.php">Admin</a>
-                </div>
-            </div>
-            <!-- <div class="header">
-                <form action="">
-                    <input class="inputSearch" type="text" name="search" value="Search">
-                    <input class="buttonSubmit" type="submit" name="search" value="search">
-                </form>
-            </div> -->
-        </header>
+            <nav>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbutton">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <img class="logo" src="img/logo_gameinfo-removebg-preview.png" alt="">
+
+                <ul class="adminHeaderA">
+                    <li><a class="a_header" href="index.php">Home</a></li>
+                    <li><a class="a_header" href="category.php">Category</a></li>
+                    <li><a class="a_header" href="news-page.php">News</a></li>
+                    <li class="a_header-hot"><a href="">HOT NEWS!</a></li>
+                    <li><a class="a_header" href="admin.php">Admin</a></li>
+                </ul>
+            </nav>
         <!--Halaman Utama -->
         <section class="container1">
             <div class="div1-left">
@@ -95,31 +89,27 @@ include_once ("dbcontroller.php");
             <div class="latest-post">
                 <h1>LATEST POST</h1>
                 <br>
-                <?php
-
-                    $sql = "SELECT * FROM article ORDER BY article_date DESC LIMIT 3";
-                    $result = $conn->query($sql);
-
-                    if ($result->num_rows > 0) {
-                        while ($row = $result ->fetch_assoc()){?>
-                        <div class="latest-post1">
-                            <div class="postImage">
-                                <img src="<?php echo $row["article_image"]?>">
-                            </div>
-                            <div class="ArticleHome">
-                                <h2><?php echo $row["article_title"]?></h2>
-                                <p class="news-date">
-                                    <?php echo $row["article_date"]?> | <?php echo $row["article_admin"]?> | <?php echo $row["article_category"]?>
-                                </p>
-                                <a href="/UAS/webprog_GameInfo/news-page.php?id=<?php echo $row["article_id"]?>">
-                                    <input type="button" value="SELENGKAPNYA" class="button_post1">
-                                </a>
-                            </div>
-                        </div>
-                        <?php
-                        }
-                    }
-                ?>
+                <div class="latest-post1">
+                    <div class="postImage"><img class="postImageimg" src="img\img-60b9bd70496999.83305970.png" alt=""></div>
+                    <div class="ArticleHome">
+                        <h3>Selyandaru Akhirnya Tidak Jomblo</h2>
+                        <p>lorem</p>
+                    </div>
+                </div>
+                <div class="latest-post2">
+                    <div class="postImage"><img class="postImageimg" src="img\img-60b9be4fdf6f33.49396398.png" alt=""></div>
+                    <div class="ArticleHome">
+                        <h3>Rafi Masuk Nominal Tertampan IMT?</h2>
+                        <p>lorem</p>
+                    </div>
+                </div>
+                <div class="latest-post3">
+                    <div class="postImage"></div>
+                    <div class="ArticleHome">
+                        <h3>Seorang Programmer Terkena Tipes</h2>
+                        
+                    </div>
+                </div>
             </div>
             <div class="our-social-media">
                 <h1>OUR SOCIAL MEDIA!</h1>

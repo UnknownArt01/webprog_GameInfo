@@ -112,18 +112,22 @@ label {
 
 /* index.php */
 
-body {
+section {
     justify-content: center;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
+    background: url(img/background.png) no-repeat;
+    background-size: calc(100vw);
 }
 
 .bodydiv {
-    margin: 2%;
+    padding: 2%;
+    background-color: #170059;
 }
 
 .adminHeader {
-    display: flex;
+    color: black;
+    height: 100px;
 }
 
 .adminHeaderLogo {
@@ -131,6 +135,7 @@ body {
     float: left;
     margin-bottom: 0%;
     font-size: 300%;
+    color: white;
 }
 
 .adminHeaderLogo2 {
@@ -138,6 +143,7 @@ body {
     float: left;
     font-size: 100%;
     margin-top: 0%;
+    color: white;
 }
 
 .inputSearch {
@@ -149,14 +155,55 @@ body {
     outline: none;
 }
 
+
+/* .logo {
+    width: 300px;
+} */
+
+.adminHeaderA {
+    float: right;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 1vw;
+}
+
+nav ul li a {
+    font-size: 17px;
+    text-transform: uppercase;
+    padding: 7px 13px;
+    border-radius: 3px;
+}
+
+a:hover {
+    background: rgb(0, 217, 255);
+}
+
+.checkbutton {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
 .a_header {
-    flex: 1.5;
-    text-decoration: none;
-    text-align: center;
+    display: inline-block;
+    line-height: 40px;
+    margin: 0 5px;
+    color: white;
 }
 
 .header {
-    flex: 1;
+    float: left;
 }
 
 .clear {
@@ -175,16 +222,6 @@ header a {
     font-weight: bold;
     text-decoration: none;
     font-size: 130%;
-}
-
-.a_header-hot {
-    color:#D22C07;
-}
-
-.adminHeaderA {
-    display: flex;
-    text-decoration: none;
-    padding-top: 7%;
 }
 
 
@@ -234,7 +271,6 @@ footer h4 {
     margin: 20px;
     height: max-content;
     float: left;
-    
     border-radius: 20px;
 }
 
@@ -243,7 +279,6 @@ footer h4 {
     margin: 20px;
     height: max-content;
     /* float: left; */
-    
     border-radius: 20px;
 }
 
@@ -261,7 +296,6 @@ footer h4 {
     height: 400px;
     padding: 15px;
     float: right;
-    
     border-radius: 30px;
     font-size: 1vw;
     text-align: center;
@@ -277,21 +311,19 @@ div.socmed-facebook {
     background-color: #3C589E;
     margin: 2%;
     padding: 2%;
-    
     height: 70px;
     border-radius: 15px;
     color: white;
-    box-shadow: 5px 5px 5px 5px grey;
+    box-shadow: 2px 2px 2px 2px grey;
 }
 
 div.socmed-youtube {
     background-color: white;
     margin: 2%;
     padding: 2%;
-    
     height: 70px;
     border-radius: 15px;
-    box-shadow: 5px 5px 5px 5px grey;
+    box-shadow: 2px 2px 2px 2px grey;
 }
 
 div.socmed-instagram {
@@ -300,7 +332,7 @@ div.socmed-instagram {
     padding: 2%;
     height: 70px;
     border-radius: 15px;
-    box-shadow: 5px 5px 5px 5px grey;
+    box-shadow: 2px 2px 2px 2px grey;
 }
 
 .img-ig {
@@ -330,9 +362,7 @@ div.socmed-instagram {
     font-size: 200%;
 }
 
-
-
-div.latest-post1 {
+div.comment-section {
     background-color: white;
     width: 100%;
     height: 315px;
@@ -342,20 +372,19 @@ div.latest-post1 {
     box-shadow: 2px 2px 2px 2px grey;
 }
 
-div.comment-section {
+
+/* .latest-post1 */
+
+div.latest-post1 {
     background-color: white;
     height: 225px;
     padding: 20px;
     margin: 40px;
     border-radius: 20px;
     box-shadow: 3px 3px 3px 3px grey;
-
 }
 
-
-/* .latest-post1 */
-
-.latest-post2 {
+div.latest-post2 {
     background-color: white;
     height: 225px;
     padding: 20px;
@@ -372,6 +401,7 @@ div.latest-post3 {
     border-radius: 20px;
     box-shadow: 3px 3px 3px 3px grey;
 }
+
 
 /* Share Button */
 
@@ -396,10 +426,8 @@ div.latest-post3 {
     height: 30px;
 }
 
-
-
 .postImage {
-    height: 80%;
+    height: 70%;
     width: 20%;
     float: left;
     background-color: grey;
@@ -408,7 +436,7 @@ div.latest-post3 {
     position: relative;
 }
 
-.postImage img{
+.postImage img {
     position: absolute;
     top: -9999px;
     left: -9999px;
@@ -417,10 +445,13 @@ div.latest-post3 {
     margin: auto;
 }
 
+.postImageimg {
+    height: 300px;
+    width: 300px;
+}
 
 .ArticleHome {
     margin: 20px;
-    
 }
 
 .ArticleHome h2 {
@@ -506,22 +537,18 @@ div.latest-post3 {
     margin-bottom: 20px;
     outline: none;
     resize: none;
-
 }
-
 
 .comment-areapanel {
     background-color: white;
     height: 450px;
     padding: 20px;
-   
     margin: 40px;
     border-radius: 20px;
     box-shadow: 10px 10px 10px 10px grey;
 }
 
 .submit-comment {
-    
     width: 150px;
     height: 35px;
     background-color: white;
@@ -542,3 +569,208 @@ div.latest-post3 {
     height: 25px;
 }
 
+
+/* tampilan Mobile */
+
+@media only screen and (max-width:952px) {
+    /* for header */
+    .adminHeaderLogo {
+        font-family: 'Kalam';
+        float: left;
+        margin-bottom: 0%;
+        font-size: 175%;
+        color: white;
+    }
+    .adminHeaderLogo2 {
+        font-family: 'Montserrat';
+        float: left;
+        font-size: 65%;
+        margin-top: 0%;
+        color: white;
+    }
+    .bodydiv {
+        width: 100%;
+    }
+    /* For tablets: */
+    nav ul li a {
+        font-size: 16px;
+    }
+    .checkbutton {
+        display: block;
+    }
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #170059;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all 1s;
+    }
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a {
+        color: white;
+        font-size: 20px;
+    }
+    a:hover {
+        background: none;
+        color: #0082e6;
+    }
+    #check:checked~ul {
+        left: 0;
+    }
+    .logo {
+        width: 200px;
+    }
+    body {
+        background-size: calc(100vh -80px);
+    }
+    /* hot news */
+    .HotNews {
+        width: 97.5%;
+        height: min-content;
+    }
+    .PhoneHot {
+        clear: both;
+    }
+    .BiggestHot {
+        width: 90%;
+        background-color: grey;
+        float: left;
+        height: 300px;
+        margin-top: 4%;
+        margin-left: 5%;
+        margin-right: 1%;
+    }
+    .biggesthot2 {
+        float: none;
+        width: 100%;
+        margin-top: 1%;
+        height: max-content;
+    }
+    .SmallHot1 {
+        width: 30%;
+        background-color: grey;
+        height: 100px;
+        margin-top: 10px;
+        float: left;
+        margin-left: 3%;
+    }
+    .SmallHot2 {
+        width: 30%;
+        background-color: grey;
+        height: 100px;
+        margin-top: 10px;
+        float: left;
+        margin-left: 2.5%;
+    }
+    .SmallHot3 {
+        width: 30%;
+        background-color: grey;
+        height: 100px;
+        margin-top: 10px;
+        float: left;
+        margin-left: 2.5%;
+    }
+    /* latest post */
+    .latest-post {
+        width: 95%;
+        margin: 0;
+        height: min-content;
+        float: left;
+        border-radius: 20px;
+    }
+    .latest-post p {
+        font-size: 2vw;
+    }
+    .latest-post h1 {
+        padding: 30px;
+        margin-left: 15px;
+        font-family: 'Montserrat';
+        font-size: 3vw;
+    }
+    .latest-post h2 {
+        padding: 10px;
+        margin-left: 15px;
+        font-family: 'Montserrat';
+        font-size: 2vw;
+    }
+    .postImage {
+        height: 125px;
+        width: 15vw;
+        float: left;
+    }
+    /* social media */
+    .our-social-media {
+        width: 95%;
+        height: min-content;
+    }
+    div.socmed-facebook {
+        width: 27%;
+        float: right;
+        height: min-content;
+    }
+    div.socmed-youtube {
+        width: 33%;
+        float: right;
+        height: min-content;
+    }
+    div.socmed-instagram {
+        width: 28%;
+        float: right;
+        height: min-content;
+    }
+    .our-social-media h2 {
+        font-size: 1.5vw;
+        margin-top: 1vw;
+    }
+    .img-ig {
+        width: 3vw;
+        height: 3vw;
+        margin-top: 1vw;
+        margin-right: 5%;
+    }
+    .img-fb {
+        width: 3vw;
+        height: 3vw;
+        margin-top: 1vw;
+    }
+    .img-yt {
+        width: 3vw;
+        height: 3vw;
+        margin-top: 1vw;
+    }
+    div.latest-post1 {
+        height: 200px;
+    }
+    div.latest-post2 {
+        height: 200px;
+    }
+    div.latest-post3 {
+        height: 200px;
+    }
+    /* share button */
+    .share-fb {
+        background-color: #3C589E;
+        width: 100px;
+        color: white;
+        height: 30px;
+        margin-left: 50px;
+    }
+    .share-wa {
+        background-color: green;
+        width: 100px;
+        color: white;
+        height: 30px;
+        margin-left: 10px;
+    }
+    .share-twitter {
+        width: 100px;
+        height: 30px;
+    }
+}
