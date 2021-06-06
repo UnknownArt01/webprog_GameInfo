@@ -24,9 +24,9 @@
 <body>
     <div class="panel-addcategory">
         <h1>Comment Panel</h1>
-        <a href="panel.php"><input class="submitpanel-button" type="submit" name="addCategorySubmit" value="Back To Panel"></a>
+        <a href="panel.php"><input class="categorylist-button" type="submit" name="addCategorySubmit" value="Back To Panel"></a>
     </div>
-
+   
     <?php
             include_once 'dbcontroller.php';
             $conn = connect_database();
@@ -35,7 +35,7 @@
 
             if ($result->num_rows > 0){
                 while ($row = $result->fetch_assoc()){
-                    echo '<div class="latest-post1">';
+                    echo '<div class="comment-panel">';
                     $artID = $row["article_id"];
                     $sql2 = "SELECT * FROM article WHERE article_id = '$artID'";
                     $result2 = $conn->query($sql2);
@@ -47,8 +47,8 @@
                     echo 'id : ' . $row["id"] . '<br>';
                     echo 'name : ' . $row["name"] . '<br>';
                     echo 'comment : ' . $row["comment"] . '<br>';?>
-    <a href="deletecomment.php?id=<?php echo $row["id"]?>"><input type="submit" value="Delete"></a>
-    <a href="editcompanel.php?id=<?php echo $row["id"]?>"><input type="submit" value="Edit"></a>
+    <a href="deletecomment.php?id=<?php echo $row["id"]?>"><input class="submitpanel-button" type="submit" value="Delete"></a>
+    <a href="editcompanel.php?id=<?php echo $row["id"]?>"><input class="submitpanel-button" type="submit" value="Edit"></a>
     <?php
                     echo '</div>';
                 }
