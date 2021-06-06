@@ -226,11 +226,11 @@ include_once ("dbcontroller.php");
 
 </body>
 <script>
-$("#buttonHideComment").click(
-    function() {
-        $("#HideComment").slideToggle("slow");
-    }
-);
+    $("#buttonHideComment").click(
+        function() {
+            $("#HideComment").slideToggle("slow");
+        }
+    );
 </script>
 
 </html>
