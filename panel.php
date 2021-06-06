@@ -199,6 +199,13 @@
             </form>
         
     </div>
+
+    <div class="panel-width">
+        <div class="panel-addcategory">  
+            <h1>Comment Panel</h1>
+            <a href="comment-panel.php"><input class="submitpanel-button" type="submit" name="addCategorySubmit" value="Click Here"></a>
+        </div>
+    </div>
 </body>
 
 </html>

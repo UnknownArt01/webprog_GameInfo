@@ -10,20 +10,12 @@
 </head>
 
 <body>
-    <div class="latest-post1">
-        <form method="POST" action="addcomment.php">
-            <label for="name">Name : </label>
-            <input type="text" name="name"><br><br>
-            <label for="comment">Comment :</label><br>
-            <textarea name="comment" class="comment-text" cols="30" rows="10"></textarea><br><br>
-            <input type="submit" name="submit">
-        </form>
+    <div class="panel-addcategory">
+        <h1>Comment Panel</h1>
+        <a href="panel.php"><input class="submitpanel-button" type="submit" name="addCategorySubmit" value="Back To Panel"></a>
     </div>
 
-    <br>
-    <br>
-    
-        <?php
+    <?php
             include_once 'dbcontroller.php';
             $conn = connect_database();
             $sql = "SELECT id, article_id, name, comment FROM comment";
@@ -43,9 +35,9 @@
                     echo 'id : ' . $row["id"] . '<br>';
                     echo 'name : ' . $row["name"] . '<br>';
                     echo 'comment : ' . $row["comment"] . '<br>';?>
-                    <a href="deletecomment.php?id=<?php echo $row["id"]?>"><input type="submit" value="Delete"></a>
-                    <a href="editcompanel.php?id=<?php echo $row["id"]?>"><input type="submit" value="Edit"></a>
-                    <?php
+    <a href="deletecomment.php?id=<?php echo $row["id"]?>"><input type="submit" value="Delete"></a>
+    <a href="editcompanel.php?id=<?php echo $row["id"]?>"><input type="submit" value="Edit"></a>
+    <?php
                     echo '</div>';
                 }
             }else{
