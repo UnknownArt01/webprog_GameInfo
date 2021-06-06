@@ -997,6 +997,20 @@
                 font-size: 2vw;
                 width: 30vw;
             }
+            .latest-post1-list {
+                width: 93%;
+                margin: 20px;
+                height: 350px;
+                /* float: left; */
+                border-radius: 20px;
+            }
+            .latest-post1-list {
+                width: 93%;
+                margin: 20px;
+                height: 200px;
+                /* float: left; */
+                border-radius: 20px;
+            }
         }
         /*CATEGORY*/
         
@@ -1137,6 +1151,13 @@
             }
             .socmed-clear {
                 clear: both;
+            }
+            .latest-post1-list {
+                width: 93%;
+                margin: 20px;
+                height: 350px;
+                /* float: left; */
+                border-radius: 20px;
             }
         }
         /* ---------PANEL---------- */
