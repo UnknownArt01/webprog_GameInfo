@@ -411,13 +411,18 @@
         }
         /* Share Button */
         
-        .share-fb {
-            background-color: #3C589E;
-            width: 150px;
-            color: white;
-            height: 30px;
-            margin-left: 50px;
+        .fb-share-button {
+            
+            margin-left: 30px;
         }
+
+        
+        .twitter-share-button {
+          
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+
         
         .share-wa {
             background-color: green;

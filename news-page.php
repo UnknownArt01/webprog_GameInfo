@@ -19,8 +19,10 @@ include_once ("dbcontroller.php");
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    
+    
     <link rel="stylesheet" href="all.css">
-
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v10.0" nonce="1je2LDZC">
     <script src="http://code.jquery.com/jquery.js" type="text/javascript"></script>
     <title>GameInfo Official Website</title>
 </head>
@@ -94,11 +96,13 @@ include_once ("dbcontroller.php");
 
     <div class="shareWhatsapp">
 
-        <a href="https://www.facebook.com/"> <input type="button" value="Share to Facebook" class="share-fb"> </a>
-        <input type="button" value="Share to WhatsApp" class="share-wa">
-        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button"
+    <div class="fb-share-button" data-href="#/news-page.php?id=<?php echo $articleID ?>" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Bagikan</a></div>
+    
+    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button"
             data-show-count="false"><input type="button" value="">Tweet</a>
-        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    
+    
 
     </div>
 
