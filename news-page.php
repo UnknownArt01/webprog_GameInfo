@@ -22,7 +22,7 @@ include_once ("dbcontroller.php");
     
     
     <link rel="stylesheet" href="all.css">
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v10.0" nonce="1je2LDZC">
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v10.0" nonce="1je2LDZC"></script>
     <script src="http://code.jquery.com/jquery.js" type="text/javascript"></script>
     <title>GameInfo Official Website</title>
 </head>
