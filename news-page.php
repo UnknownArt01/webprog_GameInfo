@@ -186,7 +186,8 @@ include_once ("dbcontroller.php");
             if ($result->num_rows > 0){
                 while ($row = $result->fetch_assoc()){?>
             <div class="latest-post1">
-                <div class="nama"> <img src="img\img-60ba4c21168b02.56602011.png" alt="">
+                <div class="nama"> 
+                    <img src="img\comment-icon.png" alt="">
                     <?php echo $row["name"]?> <br>
                 </div>
                 <div class="clear"></div>

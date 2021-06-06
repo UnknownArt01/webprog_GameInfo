@@ -744,6 +744,7 @@
         .comment {
             margin-top: 20px;
             font-size: 1.5vw;
+            font-weight: 100;
         }
         /* tampilan Mobile */
         
@@ -1036,6 +1037,13 @@
                 box-shadow: 3px 3px 3px 3px grey;
                 font-size: 12px;
             }
+            .comment{
+                font-size: 20px;
+                font-weight: 100;
+            }
+            .nama{
+                font-size: 30px;
+            }
         }
         /*CATEGORY*/
         
@@ -1196,6 +1204,10 @@
                 width: 20%;
                 font-weight: bold;
                 border-radius: 10px;
+            }
+            .comment{
+                font-size: 15px;
+                font-weight: 100;
             }
 
         }
