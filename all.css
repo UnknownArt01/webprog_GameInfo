@@ -747,7 +747,7 @@
         }
         /* tampilan Mobile */
         
-        @media only screen and (max-width:1000px) {
+        @media only screen and (max-width:1024px) {
             /* for slideshow */
             .slider {
                 width: 600px;
@@ -775,6 +775,7 @@
             .unknown {
                 margin-top: 0px;
                 margin-bottom: 0px;
+                height: 45vh;
             }
             /* for header */
             * {
@@ -907,7 +908,7 @@
                 padding: 10px;
                 margin-left: 15px;
                 font-family: 'Montserrat';
-                font-size: 2vw;
+                font-size: 3vw;
             }
             .postImage {
                 height: 125px;
@@ -1058,49 +1059,124 @@
                 height: 10px;
                 margin-top: 1vw;
             }
+            .postImageClear {
+                clear: both;
+            }
+            .postImage {
+                width: 100%;
+                margin: auto;
+                text-align: center;
+                background-color: white;
+            }
+            .postImage img {
+                width: 50%;
+                margin: auto;
+                text-align: center;
+            }
+            div.latest-post1 {
+                height: 300px;
+            }
+            .ArticleHome {
+                text-align: center;
+                margin: auto;
+            }
+            .ArticleHome h2 {
+                text-align: center;
+                margin: auto;
+                font-size: 25px;
+            }
+            .button_post1 {
+                position: relative;
+                float: none;
+            }
+            .logo img {
+                width: 20px;
+                margin-right: -15px;
+            }
+            .adminHeaderLogo {
+                font-size: 30px;
+            }
+            .adminHeaderLogo2 {
+                font-size: 10px;
+            }
+            .img-ig img {
+                width: 50px;
+                height: 50px;
+                margin-right: 5px;
+            }
+            .img-fb img {
+                width: 50px;
+                height: 50px;
+                margin-right: 5px;
+            }
+            .img-yt img {
+                width: 50px;
+                height: 50px;
+                margin-right: 5px;
+            }
+            div.socmed-facebook {
+                width: 98%;
+                float: left;
+                height: min-content;
+            }
+            div.socmed-youtube {
+                width: 98%;
+                float: left;
+                height: min-content;
+            }
+            div.socmed-instagram {
+                width: 98%;
+                float: left;
+                height: min-content;
+            }
+            .our-social-media h2 {
+                font-size: 20px;
+            }
+            .our-social-media h1 {
+                font-size: 20px;
+            }
+            .socmed-clear {
+                clear: both;
+            }
+        }
+        /* ---------PANEL---------- */
+        
+        .panel-addcategory {
+            text-align: left;
+            font-family: 'Montserrat';
+            background-color: #170059;
+            color: white;
+            height: 80px;
+            padding: 20px;
+            margin: 40px;
+            border-radius: 20px;
+            box-shadow: 3px 3px 3px 3px grey;
         }
         
-    /* ---------PANEL---------- */
-
-    .panel-addcategory {
-        text-align: left;
-        font-family: 'Montserrat';
+        .panel-function-category {
+            background-color: white;
+            width: 100%;
+            height: 100px;
+            padding: 20px;
+            margin: 15px;
+            font-family: 'Montserrat';
+            border-radius: 15px;
+            box-shadow: 2px 2px 2px 2px grey;
+        }
         
-        background-color: #170059;
-        color: white;
-        height: 80px;
-        padding: 20px;
-        margin: 40px;
-        border-radius: 20px;
-        box-shadow: 3px 3px 3px 3px grey;
-    }
-
-
-    .panel-function-category {
-        background-color: white;
-        width: 100%;
-    
-        height: 100px;
-        padding: 20px;
-        margin: 15px;
-        font-family: 'Montserrat';
-        border-radius: 15px;
-        box-shadow: 2px 2px 2px 2px grey;
-    }
-
-    .panel-width{
-        max-width: 96%;
-        margin: 10px;
-    }
-
-    .submitpanel-button {
-        align-items: right;
-        background-color: #D22C07;
-        /* position: absolute; */
-        font-size: 18px;
-        color: white;
-        float: right;
-        width: 10%;
-        font-weight: bold;
-        border-radius: 10px;
-    }
+        .panel-width {
+            max-width: 96%;
+            margin: 10px;
+        }
+        
+        .submitpanel-button {
+            align-items: right;
+            background-color: #D22C07;
+            /* position: absolute; */
+            font-size: 18px;
+            color: white;
+            float: right;
+            width: 10%;
+            font-weight: bold;
+            border-radius: 10px;
+        }

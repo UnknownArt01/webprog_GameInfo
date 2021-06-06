@@ -97,6 +97,7 @@
                 <div class="postImage">
                     <img src="<?php echo $row["article_image"]?>">
                 </div>
+                <div class="postImageClear"></div>
                 <div class="ArticleHome">
                     <h2><?php echo $row["article_title"]?></h2>
                     <p class="news-date"><?php echo $row["article_date"]?> | <?php echo $row["article_admin"]?> |
@@ -118,12 +119,12 @@
                 <div class="img-fb"><img src="img/facebook.png"></div>
                 <h2 class="socmed">GameInfo</h2>
             </div>
-
+                <div class="socmed-clear"></div>
             <div class="socmed-youtube">
                 <div class="img-yt"><img src="img/youtube.png"></div>
                 <h2 class="socmed">GameInfo Official</h2>
             </div>
-
+            <div class="socmed-clear"></div>
             <div class="socmed-instagram">
                 <div class="img-ig"><img src="img/instagram.png"></div>
                 <h2 class="socmed">officialgameinfo</h2>
