@@ -26,6 +26,41 @@
             max-width: 95%;
             margin: auto;
         }
+
+        .button-logout-div {
+            
+            align-items: center;
+            width: 80%;
+            padding-top: 30px;
+            margin: auto;
+            
+            padding: auto;
+        }
+        .button-logout-div a:hover{
+            background-color: white
+            
+        }
+
+        .logout-button {
+            align-items: center;
+            margin: auto;
+            background-color: #D22C07;
+            font-size: 18px;
+            color: white;
+            width: 50%;
+            margin-left: 300px;
+            
+            font-weight: bold;
+        
+            padding: 10px;
+            border-radius: 10px;
+        }
+        
+        .logout-button:hover {
+            background-color: white;
+            color: #D22C07;
+            font-weight: 800;
+        }
         
         .header_h1_login {
             font-family: 'Kalam';
@@ -1091,6 +1126,8 @@
             padding: 10px;
             border-radius: 10px;
         }
+
+        
         
         @media only screen and (max-width:600px) {
             .unknown {

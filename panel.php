@@ -22,6 +22,10 @@
 </head>
 
 <body>
+    <div class="button-logout-div">
+        <a href="logout.php"><input class="logout-button" type="submit" name="addCategorySubmit" value="LOGOUT"></a>
+    </div>
+
     <div class="panel-width">
         <div class="panel-addcategory">  
             <h1>Add New Category</h1>
